@@ -1,3 +1,6 @@
+
+
+
 <form action="registration_process.php" method="post">
   <input class="valid" type="text" placeholder="first name" name="fname" >
   <input class="valid" type="text" placeholder="last name" name="lname" >
