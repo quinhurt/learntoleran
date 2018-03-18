@@ -1,0 +1,32 @@
+*
+
+START TRANSACTION;
+INSERT INTO `login`
+VALUES (loginID,  '". $_POST['username']. "' , '". $_POST['password']. "');
+    SET @lastW = LAST_INSERT_ID();
+INSERT INTO `user`
+VALUES (userID, '". $_POST['fname']. "' , '". $_POST['lname']. "', '2', last_insert_id(@lastw));
+COMMIT;
+
+
+
+$insert_sql = "INSERT INTO `user` (`Fname`, `surename`, `phone`,`email`,  `DOB`, `pasword`) VALUES
+    ( '". $_POST['fname']. "' , '". $_POST['lname']. "' ,'". $_POST['phone']. "' , '". $_POST['email']. "' , '". $_POST['DOB']. "' , '". $_POST['password']. "');";
+    $conn = new PDO( "mysql:host=localhost;dbname=emailvalid", 'root', '');
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $stmt = $conn->prepare($insert_sql);
+    $stmt->execute();
+
+
+    include "..\modle\DB.php";
+
+
+
+    $insert_sql = "INSERT INTO `login` (`login`, `username`, `password`)
+    VALUES ( '". $_POST['username']. "' , '". $_POST['password']. "');";
+    $conn = dbConnect();
+      $stmt = $conn->prepare($insert_sql);
+      $stmt->execute();
+
+
+*/
