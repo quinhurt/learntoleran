@@ -6,8 +6,6 @@
 <input class="valid" type="text" placeholder="last name" name="lname" >
 <input class="valid" type="text" placeholder="date of birth" name="DOB">
 <input class="valid" type="text" placeholder="username" name="username" >
-<input class="valid" type="text" placeholder="roll" name="roll" >
-<input class="valid" type="text" placeholder="active" name="active" >
 <input class="valid" type="text" placeholder="password" name="password" id="pasword">
 
   <input type="submit" name="submit">

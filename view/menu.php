@@ -1,5 +1,7 @@
 <nav>
-  estjk
+<a href="#">login</a>
+<a href="#">signup</a>
+<a href="#">about</a>
 
 </nav>
 
@@ -8,6 +10,6 @@
 
 include "view\signup.php";
 
-include "view/newteacher.php";
+
 
  ?>
