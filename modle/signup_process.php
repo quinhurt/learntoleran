@@ -10,8 +10,9 @@ $servername = "localhost";
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql = "INSERT INTO `login`
          VALUES (loginID,  '". $_POST['username']. "' , '". $_POST['password']. "');
-         INSERT INTO `user`
-         VALUES (userID, '". $_POST['fname']. "' , '". $_POST['lname']. "', '".$_POST['roll']."' ,'".$_POST['DOB']. "', '".$_POST['active']."');";
+         SET @lastW = LAST_INSERT_ID();
+        INSERT INTO `user`
+        VALUES (userID, '". $_POST['fname']. "' , '". $_POST['lname']. "','".$_POST['DOB']. "', '2' , '1' , LAST_INSERT_ID(@lastW));";
         // use exec() because no results are returned
         $conn->exec($sql);
         echo "New record created successfully";

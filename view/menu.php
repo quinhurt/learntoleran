@@ -8,9 +8,6 @@
 
 include "view\signup.php";
 
- ?>
-
-
-<?php
+include "view/newteacher.php";
 
  ?>
