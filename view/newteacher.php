@@ -1,5 +1,7 @@
 
 
+
+
 <legend>New  teacher</legend>
 <form action="modle\newtecher_process.php" method="post">
   <input class="valid" type="text" placeholder="first name" name="fname" >

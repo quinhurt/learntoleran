@@ -4,6 +4,9 @@ include "view\header.php";
 
  ?>
 
+<div class="adminmenu">
+  ffgg
+</div>
 
 <?php
 
