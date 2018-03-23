@@ -11,3 +11,11 @@
 <input class="valid" type="text" placeholder="password" name="password" id="pasword">
 
   <input type="submit" name="submit">
+
+
+
+<?php
+
+include "footer.php";
+
+ ?>

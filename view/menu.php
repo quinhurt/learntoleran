@@ -8,26 +8,15 @@
 <a href="#">about</a>
 </nav>
 
+
+
 <?php
-
-include "view\signup.php";
-
- ?>
-</div>
-
-
-
-<div class="adminmenu">
+include "view\login.php";
+  ?>
   <?php
-  include "view/newteacher.php";
+
+  include "view\signup.php";
+
    ?>
-</div>
-
-
-<div class="teachermenu">
-
-</div>
-
-<div class="studentmenu">
 
 </div>
