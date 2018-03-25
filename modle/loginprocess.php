@@ -1,9 +1,9 @@
+
 <?php
     include 'DB.php';
     include 'session.php';
-
-    $login_sql = "SELECT username, pasword  FROM user  WHERE `username` = '". $_POST['username']. "' AND `pasword` = '" .
-    $_POST['pasword'] . "';";
+    $login_sql = "SELECT * FROM user WHERE username = '" . $_POST['username'] . "' AND pasword = '" .
+                  $_POST['pasword'] . "';";
     $conn = dbConnect();
     $stmt = $conn->prepare($login_sql);
     $stmt->execute();
