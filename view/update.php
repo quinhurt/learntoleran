@@ -1,6 +1,5 @@
 <?php
-include "../modle/DB.php";
-include "../modle/session.php";
+
 
 $conn = dbConnect();
 $contentquery = "SELECT userID,name,surname,DOB,pasword FROM user

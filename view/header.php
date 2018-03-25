@@ -16,3 +16,9 @@
   </head>
   <body>
     <h1>learn to learn</h1>
+
+<?php
+include "../modle/DB.php";
+include "../modle/session.php";
+
+ ?>

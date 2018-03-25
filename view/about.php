@@ -1,9 +1,11 @@
-<?php include "header.php" ?>
+<nav>
+  
+</nav>
     <?php
 include "update.php"
 
     ?>
 
-<?php include "footer.php" ?>
+
   </body>
 </html>

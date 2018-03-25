@@ -1,13 +1,13 @@
 admin
-username :
-password :
+username : admin
+password : pasword
 
 
-teacher 
+teacher
 username :
 password :
 
 
 student
-username :
-password :
+username : qhurt1
+password : qwerty
