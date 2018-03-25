@@ -13,9 +13,8 @@
         header('Location: _login.php');
     } else {
         $_SESSION['userid'] = $result['userID'];
-      //  $_SESSION['usertype'] = $result['usertype'];
         $_SESSION['message'] = "Login successful";
-        header('Location: ../view/about.php?');
+        header('Location: ../view/about.php?')
         echo "goodwork";
     }
 ?>
