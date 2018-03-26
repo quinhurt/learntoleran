@@ -2,7 +2,7 @@
 
 
 
-<legend>New  teacher</legend>
+<legend>New teacher</legend>
 <form action="../modle/newtecher_process.php" method="post">
   <input class="valid" type="text" placeholder="first name" name="name" >
 <input class="valid" type="text" placeholder="last name" name="lname" >

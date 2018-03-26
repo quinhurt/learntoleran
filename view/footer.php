@@ -14,6 +14,18 @@ WHERE userID =".$_SESSION['userid'];
       $pasword  =$row['pasword'];
     }
 
+
+$query = "SELECT ID, session_ID,URL,IP,DATESTAMP FROM logs";
+$stmt = $conn->prepare($query);
+$stmt->execute();
+while ($row = $stmt->fetch())
+{
+  $ID = $row['ID'];
+  $session_ID = $row['session_ID'];
+  $URL = $row['URL'];
+  $DATESTAMP  =$row['DATESTAMP'];
+}
+
  ?>
 
 
@@ -23,14 +35,24 @@ WHERE userID =".$_SESSION['userid'];
 </div>
 <section>
   made by quinlan web porduction
+  <br>
   <?php
-    echo ' USER TYPE: ' ;
+    echo 'USER TYPE: ' ;
   echo "$name";
   echo " ";
   echo "$surname";
-
-
   ?>
+<br>
+  <?php
+  echo "session  =";
+  echo "$session_ID "; ?>
+  <br>
+  <?php
+  echo " URL  ";
+  echo "$URL";
+
+?>
+
 
 </section>
 </body>

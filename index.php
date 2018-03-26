@@ -16,5 +16,5 @@ include "view\about.php"
 
 
 <?php
-include "view\Footer";
+include "view/footer.php";
  ?>
