@@ -10,7 +10,9 @@ include "view\header.php";
 include "view\menu.php";
 
  ?>
-
+<?php
+include "view\about.php"
+ ?>
 
 
 <?php

@@ -15,7 +15,7 @@
 }
 
 h1{
-  margin-left: 50%;
+  margin-left: 5%;
 }
 legend{
   margin-left: 2%;
@@ -40,13 +40,6 @@ display: none;
 
 
 
-.teachermenu{
-  display:none;
-}
-
-.studentmenu{
-  display:none;
-}
 .line{
   height: 1em;
   width: 100%;

@@ -12,13 +12,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
-<link href="control/main.css" rel="stylesheet" type="text/css">
+<link href="../control/main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <h1>learn to learn</h1>
 
 <?php
-include "modle/DB.php";
-include "modle/session.php";
+include "../modle/DB.php";
+include "../modle/session.php";
 
  ?>

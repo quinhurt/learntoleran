@@ -13,14 +13,14 @@
 
     $_SESSION['last_time'] = time();
 
-//LOG activities
+/*/LOG activities
     $log_sql = "INSERT INTO  logs (session_ID, URL, IP) VALUES ('" . session_id() . "', '" .
                 $_SERVER['REQUEST_URI'] . "',  '" . $_SERVER['HTTP_HOST'] . "');";
     $conn = DBConnect();
     $stmt = $conn->prepare($log_sql);
     $stmt->execute();
 
-// Set user to anonymous if not already
+*/// Set user to anonymous if not already
     if(!isset($_SESSION['usertype'])) {
         $_SESSION['usertype'] = 0;
     }

@@ -4,8 +4,8 @@ password : pasword
 
 
 teacher
-username :
-password :
+username : bill1
+password : pop
 
 
 student
