@@ -1,6 +1,4 @@
-<nav>
-  
-</nav>
+
  <?php
 
 $conn = dbConnect();
@@ -18,6 +16,8 @@ while ($row = $stmt->fetch())
   echo "$name";
   echo "$surname";
 }
+
+
 ?>
 <br>
 </div>
