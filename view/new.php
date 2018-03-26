@@ -1,3 +1,7 @@
+
+<div class="sorry">
+<h2>new assignment</h2>
+
 <?php
 
 
@@ -19,7 +23,7 @@ while ($row = $stmt->fetch())
 }
  ?>
 
-<div class="sorry">
-sorry this feature off the website is unviable at the current time
+
+<h3>sorry this feature off the website is unviable at the current time</h3>
 
 </div>

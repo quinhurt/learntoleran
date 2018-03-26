@@ -41,6 +41,12 @@ display: none;
 
 
 .line{
-  height: 1em;
+  height: 0.5em;
   width: 100%;
+  background-color:black;
+}
+
+
+.sorry{
+border-style: solid;
 }

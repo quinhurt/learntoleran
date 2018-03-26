@@ -33,11 +33,23 @@ while ($row = $stmt->fetch())
 <div class="line">
 
 </div>
+
+
+
 <section>
   made by quinlan web porduction
   <br>
   <?php
-    echo 'USER TYPE: ' ;
+    echo "$_SESSION[error]";
+    echo "$_SESSION[login]";
+
+    UNSET($_SESSION['error']);
+      UNSET($_SESSION['login']);
+
+   ?>
+  <br>
+  <?php
+    echo 'USER NAME: ' ;
   echo "$name";
   echo " ";
   echo "$surname";
@@ -50,7 +62,10 @@ while ($row = $stmt->fetch())
   <?php
   echo " URL  ";
   echo "$URL";
-
+?>
+<br>
+<?php
+//print_r($_SESSION)
 ?>
 
 

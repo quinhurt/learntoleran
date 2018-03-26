@@ -9,13 +9,16 @@
     $stmt->execute();
     $result = $stmt->fetch();
     if($stmt->rowcount() == 0) {
-        $_SESSION['error'] = "Login invalid please try again";
-        header('Location: _login.php');
+      header('Location: ../index.php');
+      $_SESSION['error'] = "Login invalid please try again";
+      
+
+
     } else {
         $_SESSION['userid'] = $result['userID'];
         $_SESSION['roll'] = $result['roll'];
         $_SESSION['message'] = "Login successful";
         header('Location: send.php?');
-        echo "goodwork";
-    }
+        $_SESSION['login'] = "login successful";
+  }
 ?>

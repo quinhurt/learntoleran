@@ -14,6 +14,9 @@ case '2':
 case '3':
         include '../view/teachernav.php';
    break;
-}
+
+ }
+
  include "../view/footer.php"
+
  ?>

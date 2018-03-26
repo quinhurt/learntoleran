@@ -1,8 +1,9 @@
 <?php
     session_start();
 //	reset UsersStatus
-    unset($_SESSION['error']);
-    unset($_SESSION['UserID']);
+
+    unset($_SESSION['Userid']);
+    unset($_SESSION['roll'] );
     $_SESSION['UserStatus'] = 0;
-    header('Location: index.php');
+    header('Location: ../index.php');
 ?>
