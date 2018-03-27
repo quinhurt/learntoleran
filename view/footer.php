@@ -37,7 +37,11 @@ while ($row = $stmt->fetch())
 
 
 <section>
-  made by quinlan web porduction
+  <div class="jumbotron">
+
+
+  <h4>made by quinlan web porduction</h4>
+  </div>
   <br>
   <?php
     echo "$_SESSION[error]";

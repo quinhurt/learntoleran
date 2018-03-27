@@ -22,8 +22,6 @@ while ($row = $stmt->fetch())
 
 ?>
 <br>
- <div class="sorry">
 
-   this feature is in the works
 
- </div>
+<h3>this feature is in the works</h3>   
