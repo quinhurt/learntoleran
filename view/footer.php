@@ -1,5 +1,5 @@
 <?php
-
+/*
 
 $conn = dbConnect();
 $contentquery = "SELECT userID,name,surname,DOB,pasword FROM user
@@ -25,6 +25,7 @@ while ($row = $stmt->fetch())
   $URL = $row['URL'];
   $DATESTAMP  =$row['DATESTAMP'];
 }
+*/
 
  ?>
 
@@ -44,33 +45,16 @@ while ($row = $stmt->fetch())
   </div>
   <br>
   <?php
-    echo "$_SESSION[error]";
-    echo "$_SESSION[login]";
+  //  echo "$_SESSION[error]";
+  //  echo "$_SESSION[login]";
 
-    UNSET($_SESSION['error']);
-      UNSET($_SESSION['login']);
-
+  //  UNSET($_SESSION['error']);
+  //    UNSET($_SESSION['login']);
+  echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>';
+    UNSET($_SESSION)
    ?>
-  <br>
-  <?php
-    echo 'USER NAME: ' ;
-  echo "$name";
-  echo " ";
-  echo "$surname";
-  ?>
-<br>
-  <?php
-  echo "session  =";
-  echo "$session_ID "; ?>
-  <br>
-  <?php
-  echo " URL  ";
-  echo "$URL";
-?>
-<br>
-<?php
-//print_r($_SESSION)
-?>
+
+
 
 
 </section>
