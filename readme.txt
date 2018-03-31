@@ -1,9 +1,9 @@
 admin
 username : admin
-password : password
+password : pasword
 
 admin can create new teacher
-admin can view all active uses 
+admin can view all active uses
 
 /////////////////////////////////////////////////////////
 teacher
