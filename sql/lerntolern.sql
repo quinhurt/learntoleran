@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 30, 2018 at 03:30 AM
+-- Generation Time: Apr 06, 2018 at 02:07 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -39,16 +39,9 @@ DELIMITER ;
 --
 
 CREATE TABLE `assigment` (
-  `assigmentID` int(11) NOT NULL
+  `assigmentID` int(11) NOT NULL,
+  `ClassID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `assigment`
---
-
-INSERT INTO `assigment` (`assigmentID`) VALUES
-(1),
-(2);
 
 -- --------------------------------------------------------
 
@@ -58,11 +51,16 @@ INSERT INTO `assigment` (`assigmentID`) VALUES
 
 CREATE TABLE `class` (
   `ClassID` int(11) NOT NULL,
-  `userID` int(11) DEFAULT NULL,
-  `lessonID` int(11) DEFAULT NULL,
-  `assigmentID` int(11) DEFAULT NULL,
-  `grade` int(11) NOT NULL
+  `className` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `class`
+--
+
+INSERT INTO `class` (`ClassID`, `className`) VALUES
+(11, 'maths'),
+(12, 'english');
 
 -- --------------------------------------------------------
 
@@ -72,18 +70,10 @@ CREATE TABLE `class` (
 
 CREATE TABLE `collectbox` (
   `collectboxid` int(11) NOT NULL,
-  `content` mediumtext NOT NULL,
-  `file` mediumblob NOT NULL,
+  `text` mediumtext NOT NULL,
+  `file` longblob NOT NULL,
   `assigmentID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `collectbox`
---
-
-INSERT INTO `collectbox` (`collectboxid`, `content`, `file`, `assigmentID`) VALUES
-(3, 'hellow', 0x7175696e6c616e2068757274207465737420322e646f6378, 1),
-(4, 'new', 0x74657374322e646f6378, 2);
 
 -- --------------------------------------------------------
 
@@ -118,39 +108,9 @@ CREATE TABLE `grade` (
 CREATE TABLE `lesson` (
   `LessonID` int(11) NOT NULL,
   `lessonNAME` varchar(30) NOT NULL,
-  `tutorial` varchar(45) DEFAULT NULL
+  `tutorial` varchar(45) DEFAULT NULL,
+  `ClassID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `lesson`
---
-
-INSERT INTO `lesson` (`LessonID`, `lessonNAME`, `tutorial`) VALUES
-(1, 'lesson 1', 'this ia a new lesson');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `login`
---
-
-CREATE TABLE `login` (
-  `loginID` int(11) NOT NULL,
-  `username` varchar(45) DEFAULT NULL,
-  `password` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `login`
---
-
-INSERT INTO `login` (`loginID`, `username`, `password`) VALUES
-(4, 'admin', 'administrator'),
-(27, 'reddy', 'fredy'),
-(28, 'reddy', 'fredy'),
-(29, 'teach', 'teach'),
-(42, 'jess', 'password'),
-(43, 'qhurt', 'qwerty');
 
 -- --------------------------------------------------------
 
@@ -166,6 +126,58 @@ CREATE TABLE `logs` (
   `datestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `logs`
+--
+
+INSERT INTO `logs` (`ID`, `session_ID`, `URL`, `IP`, `datestamp`) VALUES
+(539, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-03-30 03:06:54'),
+(540, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-02 08:04:34'),
+(541, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-02 08:05:50'),
+(542, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-03 07:31:40'),
+(543, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 00:34:52'),
+(544, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 00:36:45'),
+(545, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 00:37:05'),
+(546, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 00:39:01'),
+(547, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 00:39:26'),
+(548, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 00:41:09'),
+(549, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 01:40:34'),
+(550, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 01:43:20'),
+(551, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 01:53:15'),
+(552, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 02:20:31'),
+(553, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 02:20:32'),
+(554, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 09:56:26'),
+(555, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 09:56:50'),
+(556, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 09:56:51'),
+(557, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 10:22:44'),
+(558, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 10:23:36'),
+(559, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 10:23:37'),
+(560, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 10:23:48'),
+(561, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 10:23:52'),
+(562, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 10:24:40'),
+(563, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 10:25:42'),
+(564, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 10:25:43'),
+(565, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 10:25:45'),
+(566, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 10:25:50'),
+(567, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 10:26:21'),
+(568, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 10:32:44'),
+(569, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/index.php', 'localhost', '2018-04-06 11:48:26'),
+(570, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/modle/loginprocess.php', 'localhost', '2018-04-06 11:48:35'),
+(571, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/modle/send.php?', 'localhost', '2018-04-06 11:48:35'),
+(572, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/modle/send.php?', 'localhost', '2018-04-06 11:50:36'),
+(573, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/modle/send.php?', 'localhost', '2018-04-06 11:51:45'),
+(574, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/modle/send.php?', 'localhost', '2018-04-06 11:51:45'),
+(575, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/modle/send.php?', 'localhost', '2018-04-06 11:51:47'),
+(576, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/modle/send.php?', 'localhost', '2018-04-06 11:52:51'),
+(577, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/modle/send.php?', 'localhost', '2018-04-06 12:00:28'),
+(578, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/modle/send.php?', 'localhost', '2018-04-06 12:01:53'),
+(579, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/modle/send.php?', 'localhost', '2018-04-06 12:04:32'),
+(580, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/modle/send.php?', 'localhost', '2018-04-06 12:04:35'),
+(581, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/modle/send.php?', 'localhost', '2018-04-06 12:05:38'),
+(582, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/modle/send.php', 'localhost', '2018-04-06 12:06:45'),
+(583, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/modle/send.php', 'localhost', '2018-04-06 12:06:57'),
+(584, '313jjtq75vh5u8od3j6gj4chtk', '/learntoleran/modle/send.php', 'localhost', '2018-04-06 12:07:23');
+
 -- --------------------------------------------------------
 
 --
@@ -174,11 +186,12 @@ CREATE TABLE `logs` (
 
 CREATE TABLE `user` (
   `userID` int(11) NOT NULL,
-  `name` varchar(45) DEFAULT NULL,
-  `surname` varchar(45) DEFAULT NULL,
+  `name` varchar(45) NOT NULL,
+  `surname` varchar(45) NOT NULL,
   `DOB` date NOT NULL,
   `username` varchar(255) NOT NULL,
   `pasword` varchar(255) NOT NULL,
+  `userClassID` int(11) NOT NULL,
   `roll` int(11) NOT NULL,
   `active` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -187,15 +200,16 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`userID`, `name`, `surname`, `DOB`, `username`, `pasword`, `roll`, `active`) VALUES
-(1, 'quin', 'hurt', '0000-00-00', 'admin', 'pasword', 1, 1),
-(25, 'bob', 'smith', '0000-00-00', 'bob', 'bob', 2, 1),
-(26, 'fin', '', '0000-00-00', 'ted', 'ted', 2, 1),
-(27, 'quin', 'hurt', '0000-00-00', 'qhurt1', 'qwerty', 2, 1),
-(28, 'bill', 'lee', '0000-00-00', 'bill1', 'pop', 3, 1),
-(29, 'ethan', 'houley', '0000-00-00', 'ethan2', 'ethan', 3, 1),
-(34, 'fred', 'fred', '0000-00-00', 'fred', 'freddy', 3, 1),
-(36, 'fill', 'clark', '0000-00-00', 'fill2', 'phillip', 3, 1);
+INSERT INTO `user` (`userID`, `name`, `surname`, `DOB`, `username`, `pasword`, `userClassID`, `roll`, `active`) VALUES
+(38, 'quin', 'hurt', '2018-04-10', 'qhurt1', 'qwerty', 11, 1, 1),
+(44, 'bill', 'bc', '0000-00-00', 'bob', 'b', 12, 2, 1),
+(45, 'bOb', 'bob', '0000-00-00', 'bob', 'bob', 11, 2, 1),
+(46, 'fred', 'freddy', '0000-00-00', 'fred01', 'fredfredy', 11, 2, 1),
+(50, 'w', 'w', '0000-00-00', 'w', 'w', 12, 2, 1),
+(51, 'w', 'w', '0000-00-00', 'w', 'w', 12, 3, 1),
+(52, 'g', 'g', '0000-00-00', 'g', 'g', 11, 3, 1),
+(53, 'a', 'a', '0000-00-00', 'a', 'a', 12, 3, 1),
+(54, 'z', 'z', '0000-00-00', 'z', 'z', 12, 3, 1);
 
 --
 -- Indexes for dumped tables
@@ -205,48 +219,43 @@ INSERT INTO `user` (`userID`, `name`, `surname`, `DOB`, `username`, `pasword`, `
 -- Indexes for table `assigment`
 --
 ALTER TABLE `assigment`
-  ADD PRIMARY KEY (`assigmentID`);
+  ADD PRIMARY KEY (`assigmentID`),
+  ADD KEY `ClassID` (`ClassID`);
 
 --
 -- Indexes for table `class`
 --
 ALTER TABLE `class`
-  ADD PRIMARY KEY (`ClassID`),
-  ADD UNIQUE KEY `grade` (`grade`),
-  ADD KEY `lesson` (`lessonID`),
-  ADD KEY `assigmentID` (`assigmentID`),
-  ADD KEY `userID` (`userID`);
+  ADD PRIMARY KEY (`ClassID`);
 
 --
 -- Indexes for table `collectbox`
 --
 ALTER TABLE `collectbox`
   ADD PRIMARY KEY (`collectboxid`),
-  ADD KEY `collect` (`assigmentID`);
+  ADD KEY `assigmentID` (`assigmentID`);
 
 --
 -- Indexes for table `dropbox`
 --
 ALTER TABLE `dropbox`
-  ADD PRIMARY KEY (`dropboxID`);
+  ADD PRIMARY KEY (`dropboxID`),
+  ADD KEY `assigmentID` (`assigmentID`);
 
 --
 -- Indexes for table `grade`
 --
 ALTER TABLE `grade`
-  ADD PRIMARY KEY (`gradeID`);
+  ADD PRIMARY KEY (`gradeID`),
+  ADD KEY `assigmentID` (`assigmentID`),
+  ADD KEY `assigmentID_2` (`assigmentID`);
 
 --
 -- Indexes for table `lesson`
 --
 ALTER TABLE `lesson`
-  ADD PRIMARY KEY (`LessonID`);
-
---
--- Indexes for table `login`
---
-ALTER TABLE `login`
-  ADD PRIMARY KEY (`loginID`);
+  ADD PRIMARY KEY (`LessonID`),
+  ADD KEY `ClassID` (`ClassID`);
 
 --
 -- Indexes for table `logs`
@@ -258,7 +267,8 @@ ALTER TABLE `logs`
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`userID`);
+  ADD PRIMARY KEY (`userID`),
+  ADD KEY `ClassID` (`userClassID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -273,56 +283,61 @@ ALTER TABLE `assigment`
 -- AUTO_INCREMENT for table `class`
 --
 ALTER TABLE `class`
-  MODIFY `ClassID` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `collectbox`
---
-ALTER TABLE `collectbox`
-  MODIFY `collectboxid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ClassID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `lesson`
 --
 ALTER TABLE `lesson`
   MODIFY `LessonID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `login`
---
-ALTER TABLE `login`
-  MODIFY `loginID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
---
 -- AUTO_INCREMENT for table `logs`
 --
 ALTER TABLE `logs`
-  MODIFY `ID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=539;
+  MODIFY `ID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=585;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 --
 -- Constraints for dumped tables
 --
 
 --
--- Constraints for table `class`
+-- Constraints for table `assigment`
 --
-ALTER TABLE `class`
-  ADD CONSTRAINT `class_ibfk_1` FOREIGN KEY (`assigmentID`) REFERENCES `assigment` (`assigmentID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `class_ibfk_2` FOREIGN KEY (`grade`) REFERENCES `grade` (`gradeID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `class_ibfk_3` FOREIGN KEY (`userID`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `lesson` FOREIGN KEY (`lessonID`) REFERENCES `lesson` (`LessonID`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `assigment`
+  ADD CONSTRAINT `assigment_ibfk_1` FOREIGN KEY (`ClassID`) REFERENCES `class` (`ClassID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `collectbox`
 --
 ALTER TABLE `collectbox`
-  ADD CONSTRAINT `collect` FOREIGN KEY (`assigmentID`) REFERENCES `assigment` (`assigmentID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `collectbox_ibfk_1` FOREIGN KEY (`assigmentID`) REFERENCES `assigment` (`assigmentID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `dropbox`
 --
 ALTER TABLE `dropbox`
-  ADD CONSTRAINT `drop` FOREIGN KEY (`dropboxID`) REFERENCES `assigment` (`assigmentID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `dropbox_ibfk_1` FOREIGN KEY (`assigmentID`) REFERENCES `assigment` (`assigmentID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `grade`
+--
+ALTER TABLE `grade`
+  ADD CONSTRAINT `grade_ibfk_1` FOREIGN KEY (`assigmentID`) REFERENCES `assigment` (`assigmentID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `lesson`
+--
+ALTER TABLE `lesson`
+  ADD CONSTRAINT `lesson_ibfk_1` FOREIGN KEY (`ClassID`) REFERENCES `class` (`ClassID`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`userClassID`) REFERENCES `class` (`ClassID`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
