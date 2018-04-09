@@ -4,7 +4,8 @@
 
 
 $conn = dbConnect();
-$contentquery = "SELECT lessonID, lessonNAME, tutorial FROM  lesson ";
+$contentquery = "SELECT lessonID, lessonNAME, tutorial FROM  lesson
+WHERE classID =".$_SESSION['userClassID'];
 $stmt = $conn->prepare($contentquery);
 $stmt->execute();
 while ($row = $stmt->fetch())
@@ -12,10 +13,11 @@ while ($row = $stmt->fetch())
  $lessonID = $row['lessonID'];
  $lessonNAME = $row['lessonNAME'];
  $tutorial = $row['tutorial'];?>
-
+<h5>
 <?php
- echo "$lessonID";
- echo "$lessonNAME";
+ echo "$lessonNAME";?></h5><br>
+
+ <?php
  echo "$tutorial";
 }
 
@@ -24,4 +26,4 @@ while ($row = $stmt->fetch())
 <br>
 
 
-<h3>this feature is in the works</h3>   
+<h3>this feature is in the works</h3>

@@ -4,7 +4,7 @@
 
 
 $conn = dbConnect();
-$contentquery = "SELECT userID,name,surname,DOB,pasword FROM user
+$contentquery = "SELECT userID,name,surname,DOB,pasword, UserCLassID FROM user
 WHERE userID =".$_SESSION['userid'];
     $stmt = $conn->prepare($contentquery);
   $stmt->execute();
@@ -14,6 +14,7 @@ WHERE userID =".$_SESSION['userid'];
       $surname = $row['surname'];
       $DOB = $row['DOB'];
       $pasword  =$row['pasword'];
+      $UserCLassID = $row['UserCLassID'];
     }
 
     echo '<form action="../modle/update_process.php" method="post">';
@@ -30,6 +31,7 @@ echo "$name";
 echo "$surname";
 echo "$DOB";
 echo "$pasword";
+echo "$UserCLassID";
 
 
 
