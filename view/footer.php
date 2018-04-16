@@ -45,13 +45,9 @@ while ($row = $stmt->fetch())
   </div>
   <br>
   <?php
-  //  echo "$_SESSION[error]";
-  //  echo "$_SESSION[login]";
 
-  //  UNSET($_SESSION['error']);
-  //    UNSET($_SESSION['login']);
   echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>';
-    UNSET($_SESSION)
+    
    ?>
 
 

@@ -6,10 +6,9 @@
 
 
 $conn = dbConnect();
-$contentquery = "SELECT content, file FROM collectbox";
+$contentquery =  "SELECT content, file FROM collectbox INNER JOIN assigment WHERE classID =".$_SESSION['userClassID'];
 $stmt = $conn->prepare($contentquery);
 $stmt->execute();
-
 
 while ($row = $stmt->fetch())
 {

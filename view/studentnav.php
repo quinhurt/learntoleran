@@ -5,10 +5,12 @@
 include "update.php"
     ?>
     <br>
+
+    <?php
+    include "viewlesson.php"
+     ?>
+
     <?php
 include "new.php"
      ?>
 <br>
-<?php
-include "viewlesson.php"
- ?>

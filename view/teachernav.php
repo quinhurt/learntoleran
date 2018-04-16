@@ -11,8 +11,9 @@ include 'newlesson.php';
 include 'newassigment.php';
 
 
-include "viewlesson.php"
+include "viewlesson.php";
 
+include "new.php";
 
 
 

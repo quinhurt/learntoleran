@@ -1,10 +1,32 @@
 <?php
 include "DB.php";
+include "session.php";
 
-$conn= DBconnect();
+
+
+
+
+$conn = DBconnect();
+$contentquery = "SELECT * from user  WHERE userClassID =".$_SESSION['userClassID'];
+$stmt = $conn->prepare($contentquery);
+$stmt->execute();
+
+while ($row = $stmt->fetch())
+{
+  $userClassID = $row['userClassID'];
+
+?>
+
+<?php
+  echo "$userClassID";
+
+}
+ ?>
+
+<?php
 
 $sql = "INSERT INTO `lesson`
-VALUES ('lessonID', '".$_POST['lessonname']."', '".$_POST['tutorial']."');";
+VALUES ('lessonID', '".$_POST['lessonname']."', '".$_POST['tutorial']."' , '$userClassID')";
 $conn->exec($sql);
-echo "New record created successfully";
+header('Location: send.php');
  ?>
