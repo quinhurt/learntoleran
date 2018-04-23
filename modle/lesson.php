@@ -17,11 +17,10 @@ while ($row = $stmt->fetch())
 
 ?>
 
-<?php
-  echo "$userClassID";
+
 
 }
- ?>
+
 
 <?php
 
