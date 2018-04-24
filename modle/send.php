@@ -14,9 +14,11 @@ case '2':
 case '3':
         include '../view/teachernav.php';
    break;
-
+   default:
+   header ('location: ../index.php');
+break;
  }
 
- include "../view/footer.php"
+ include "../view/footer.php";
 
  ?>
