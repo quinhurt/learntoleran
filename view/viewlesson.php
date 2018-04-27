@@ -2,28 +2,41 @@
 <h2>lessons</h2>
 <?php
 
-
 $conn = dbConnect();
-$contentquery = "SELECT lessonID, lessonNAME, tutorial FROM  lesson
+$contentquery = "SELECT * FROM  lesson
 WHERE classID =".$_SESSION['userClassID'];
 $stmt = $conn->prepare($contentquery);
 $stmt->execute();
 while ($row = $stmt->fetch())
 {
- $lessonID = $row['lessonID'];
+?>  <div class="left"> <?php
  $lessonNAME = $row['lessonNAME'];
- $tutorial = $row['tutorial'];?>
-<h5>
-<?php
- echo "$lessonNAME";?></h5><br>
+ $LessonID = $row['LessonID'];
 
- <?php
- echo "$tutorial";
+ echo "$lessonNAME";
+ ?>
+ <a href="send.php?LessonID=<?php echo $row['LessonID']?>">lessonNAME</a>
+
+</div>
+<?php
 }
 
 
 ?>
-<br>
+
+
+<?php
+$conn = dbConnect();
+$sql1 = "SELECT * FROM  lesson
+WHERE LessonID =".$_GET['LessonID'];
+$stmt = $conn->prepare($sql1);
+$stmt->execute();
+$tutorial = $row['tutorial'];
+
+echo "$tutorial";
+
+ ?>
+
 
 
 <h3>this feature is in the works</h3>

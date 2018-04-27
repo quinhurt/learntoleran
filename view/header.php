@@ -27,16 +27,11 @@
             <link rel="stylesheet" href="../css/sementic_ui_range.css"/>
 
     <!-- Customisations -->
-            <script src="../js/formValidation.js" defer></script>
-            <link rel="stylesheet" href="../css/customerbase.css" type="text/css">
-<link href="control/main.css" rel="stylesheet" type="text/css">
+            <script src="control/formValidation.js" defer></script>
+            <script src="control/JavaScript.js" defer></script>
+          <link href="../control/main.css" rel="stylesheet" type="text/css">
+            <link href="control/main.css" rel="stylesheet" type="text/css">
 
   </head>
   <body>
     <h1>learn to learn</h1>
-
-<?php
-include "modle/DB.php";
-include "modle/session.php";
-//header('Content-Type: application/json');
- ?>

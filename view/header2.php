@@ -23,10 +23,13 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"/>
 
-            <script src="../control/formvladtion.js" defer></script>
-          
 
-<link href="control/main.css" rel="stylesheet" type="text/css">
+
+<script src="../control/formValidation.js" defer></script>
+<script src="../control/JavaScript.js" defer></script>
+<link rel="stylesheet" href="../css/customerbase.css" type="text/css">
+<link href="../control/main.css" rel="stylesheet" type="text/css">
+
 
   </head>
   <body>

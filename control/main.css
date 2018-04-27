@@ -56,3 +56,12 @@ h4{
 margin: 45;
 
 }
+.right{
+  width:80%;
+  float: right;
+}
+
+.left{
+  width: 20%;
+  float:20%;
+}

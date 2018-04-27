@@ -1,5 +1,11 @@
 <?php
-include '../view/header2.php';
+include '../view/header.php';
+
+include "../modle/DB.php";
+include "../modle/session.php";
+
+
+
 
 
 

@@ -2,7 +2,12 @@
 <?php
 include "view\header.php";
 
+include "modle/DB.php";
+include "modle/session.php";
+
  ?>
+
+
 
 
 
@@ -11,7 +16,7 @@ include "view\menu.php";
 
  ?>
 <?php
-include "view\about.php"
+
  ?>
 
 
