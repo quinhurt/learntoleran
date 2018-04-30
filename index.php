@@ -1,24 +1,32 @@
 
 <?php
-include "view\header.php";
+  //  session_start(); if ($_SESSION['roll'] == ) {
+    //      Header('location: index.php' }
+
+include "view/header.php";
 
 include "modle/DB.php";
-include "modle/session.php";
 
+include 'modle/modle.php'
  ?>
 
 
-
-
-
-<?php
-include "view\menu.php";
-
- ?>
-<?php
-
- ?>
-
+ <?php
+ switch($_SESSION['roll']) {
+   case '1':
+         include 'view/adminnav.php';
+     break;
+ case '2':
+         include 'view/studentnav.php';
+     break;
+ case '3':
+         include 'view/teachernav.php';
+    break;
+default:
+    include 'view/menu.php';
+ break;
+  }
+  ?>
 
 <?php
 include "view/footer.php";

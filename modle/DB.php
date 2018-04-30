@@ -1,7 +1,7 @@
 
 <?php
 function dbConnect() {
-$servername = "localhost";
+    $servername = "localhost";
     $username = "root";
     $password = "";
     $dbname = "lerntolern";

@@ -4,11 +4,12 @@ password : pasword
 
 admin can create new teacher
 admin can view all active uses
+create new class
 
 /////////////////////////////////////////////////////////
 teacher
-username : bill1
-password : pop
+username : peter1
+password : muchow
 
 teacher can create new assignment
 teacher can create new lesson
@@ -26,3 +27,25 @@ student can update there user information
 student can upload assignments
 student can view assignment
 student can view lesson
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+session_start()if (isset($_SESSION['roll'])) {
+  if ($_SESSION['roll'] != '1') {
+    Header('location: index.php')
+  }
+
+}else {
+  Header('location: index.php')
+}
+
+
+session_start()if (isset($_SESSION['roll'])) {
+  if ($_SESSION['roll'] != '1') {
+    Header('location: index.php')
+  }
+
+}else {
+  Header('location: index.php')
+}

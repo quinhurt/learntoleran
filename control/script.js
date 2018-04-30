@@ -1,3 +1,5 @@
+
+/*
 $('#sandbox-container input').datepicker({
     format: "yyyy/mm/dd",
     weekStart: "sunday",
@@ -8,8 +10,8 @@ $('#sandbox-container input').datepicker({
     autoclose: true,
     todayHighlight: true
 });
+*/
 
-window.onload = function() {
-    getlesson();
-    setInterval(getNoInQueue, 30000);
+function {
+  
 }
