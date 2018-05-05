@@ -5,7 +5,10 @@ include "../modle/DB.php";
 include "../modle/session.php";
 
 
+?>
 
+
+<?php
 
 
 

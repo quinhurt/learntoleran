@@ -21,8 +21,8 @@
     $stmt->execute();
 
 // Set user to anonymous if not already
-    if(!isset($_SESSION['usertype'])) {
-        $_SESSION['usertype'] = 0;
+    if(!isset($_SESSION['roll'])) {
+        $_SESSION['roll'] = 0;
     }
 
 

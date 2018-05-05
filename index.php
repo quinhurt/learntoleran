@@ -4,12 +4,10 @@
     //      Header('location: index.php' }
 
 include "view/header.php";
-
 include "modle/DB.php";
+include "modle/session.php";
 
-include 'modle/modle.php'
  ?>
-
 
  <?php
  switch($_SESSION['roll']) {
@@ -27,6 +25,7 @@ default:
  break;
   }
   ?>
+  <!-- Button trigger modal -->
 
 <?php
 include "view/footer.php";

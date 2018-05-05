@@ -1,33 +1,4 @@
-<?php
-/*
 
-$conn = dbConnect();
-$contentquery = "SELECT userID,name,surname,DOB,pasword FROM user
-WHERE userID =".$_SESSION['userid'];
-    $stmt = $conn->prepare($contentquery);
-  $stmt->execute();
-   while ($row = $stmt->fetch())
-  {
-      $name = $row['name'];
-      $surname = $row['surname'];
-      $DOB = $row['DOB'];
-      $pasword  =$row['pasword'];
-    }
-
-
-$query = "SELECT ID, session_ID,URL,IP,DATESTAMP FROM logs";
-$stmt = $conn->prepare($query);
-$stmt->execute();
-while ($row = $stmt->fetch())
-{
-  $ID = $row['ID'];
-  $session_ID = $row['session_ID'];
-  $URL = $row['URL'];
-  $DATESTAMP  =$row['DATESTAMP'];
-}
-*/
-
- ?>
 
 
 
@@ -45,14 +16,14 @@ while ($row = $stmt->fetch())
   </div>
   <br>
   <?php
+//  echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>';
 
-  echo '<pre>' . print_r($_SESSION, TRUE) . '</pre>';
-    
    ?>
 
 
 
 
 </section>
+  </div>
 </body>
 </html>

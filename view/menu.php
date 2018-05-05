@@ -9,16 +9,16 @@
 </nav>
 
 
-<div class="ui form large" id="login_form">
+<div class="ui form large">
    <form action="modle\loginprocess.php" method="POST">
-           <input type="text" name="username" id="cust_login_email" placeholder="user name">
-           <input type="password" name="pasword" id="cust_login_password" placeholder="Password">
+           <input class="form-control"  type="text" name="username"  placeholder="user name">
+           <input  class="form-control"  type="password" name="pasword"  placeholder="Password">
 
            <button type="submit" >
                Login
                 </button>
 
-       <div id="loginvalidity" class="ui error message"></div>
+
    </form>
 </div>
 
@@ -33,10 +33,10 @@ $res_class->execute();
  ?>
 
 <form action="modle\signup_process.php"  method="post">
-  <input class="valid" id="name" type="text" required placeholder="first name" name="name" >
-<input class="valid" id="lname" type="text"required placeholder="last name" name="lname" >
-<input type="text"  id="DOB" name="DOB" required placeholder="date of birth">
-<select name="class" style="width: 200px">
+  <input class="form-control"id="name" type="text" required placeholder="first name" name="name" >
+<input class="form-control" id="lname" type="text"required placeholder="last name" name="lname" >
+<input  class="form-control" type="text"  id="DOB" name="DOB" required placeholder="date of birth">
+<select class="form-control" name="class" style="width: 200px">
             <?php
             while ($row_class = $res_class->fetch(PDO::FETCH_ASSOC)) {
                 echo '<option value="' . $row_class['ClassID'] . '" ';
@@ -44,11 +44,10 @@ $res_class->execute();
                 echo '>' . $row_class['className'] . '</option>';
             }
             ?>
-
   </select>
 
-<input class="valid" id="username" type="text"required placeholder="username" name="username" >
-<input class="valid" id="password" type="text"required placeholder="password" name="password" id="pasword">
+<input class="form-control" id="username" type="text"required placeholder="username" name="username" >
+<input class="form-control" id="password" type="password"required placeholder="password" name="password" >
   <input type="submit" name="submit"  onclick="student">
 </form>
 

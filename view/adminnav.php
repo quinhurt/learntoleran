@@ -59,11 +59,11 @@ $res_class->execute();
  ?>
 <legend>NEW TEACHER</legend>
 <form action="newtecher_process.php"  method="post">
-  <input class="valid" type="text" required placeholder="first name" name="name" >
-<input class="valid" type="text"required placeholder="last name" name="lname" >
-<input type="text"  name="DOB" required placeholder="date of birth">
-<input class="valid" type="text"required placeholder="username" name="username" >
-<select name="class" style="width: 200px">
+  <input  class="form-control"  type="text" required placeholder="first name" name="name" >
+<input  class="form-control"  type="text"required placeholder="last name" name="lname" >
+<input  class="form-control"   name="DOB" required placeholder="date of birth">
+<input  class="form-control"  type="text"required placeholder="username" name="username" >
+<select  class="form-control"  name="class" style="width: 200px">
             <?php
             while ($row_class = $res_class->fetch(PDO::FETCH_ASSOC)) {
                 echo '<option value="' . $row_class['ClassID'] . '" ';
@@ -80,7 +80,7 @@ $res_class->execute();
 
 <div class="newclass">
   <form method="post" >
-    <input type="text" name="newclass" placeholder="new class">
+    <input   class="form-control"  type="text" name="newclass" placeholder="new class">
     <button type="submit" name="button" onClick="newclass() " id="class">submit</button>
   </form>
 </div>
