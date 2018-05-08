@@ -19,7 +19,7 @@
         $_SESSION['roll'] = $result['roll'];
         $_SESSION['userClassID'] = $result['userClassID'];
         $_SESSION['message'] = "Login successful";
-        header('Location: send.php?');
+        header('Location: ../index.php?');
         $_SESSION['login'] = "login successful";
   }
 ?>

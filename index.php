@@ -1,7 +1,5 @@
 
 <?php
-  //  session_start(); if ($_SESSION['roll'] == ) {
-    //      Header('location: index.php' }
 
 include "view/header.php";
 include "modle/DB.php";
@@ -24,8 +22,7 @@ default:
     include 'view/menu.php';
  break;
   }
-  ?>
-  <!-- Button trigger modal -->
+?>
 
 <?php
 include "view/footer.php";

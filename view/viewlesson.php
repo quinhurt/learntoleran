@@ -17,7 +17,7 @@ while ($row = $stmt->fetch())
 
  echo "$lessonNAME";
  ?>
- <a href="send.php?LessonID=<?php echo $row['LessonID']?>">lessonNAME</a>
+ <a href="index.php?LessonID=<?php echo $row['LessonID']?>">lessonNAME</a>
 </div>
 <?php
 }

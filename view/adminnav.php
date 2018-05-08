@@ -4,7 +4,11 @@
 
  ?>
     <nav>
-      <li><a href="modle/logout.php" class="text_nav"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      <a >useres </a>
+      <a>new class  </a>
+      <a > new teacher</a>
+
+      <a href="modle/logout.php"  class="logout"> Logout</a>
     </nav>
     <legend>all student</legend>
      <?php
@@ -30,7 +34,7 @@
   <?php
 
   $conn = dbConnect();
-  $contentquery = "SELECT userID, name, surname, userClassID FROM user  where roll = 3";
+  $contentquery = "SELECT userID, name, surname, userClassID FROM user  where roll =3";
   $stmt = $conn->prepare($contentquery);
   $stmt->execute();
   while ($row = $stmt->fetch())
@@ -73,14 +77,15 @@ $res_class->execute();
             ?>
 
   </select>
-<input class="valid" type="text"required placeholder="password" name="password" id="pasword">
+<input class="form-control" type="text"required placeholder="password" name="password" id="pasword">
   <input type="submit" name="submit"  onclick="student()">
 </form>
 
 
+
 <div class="newclass">
-  <form method="post" >
-    <input   class="form-control"  type="text" name="newclass" placeholder="new class">
-    <button type="submit" name="button" onClick="newclass() " id="class">submit</button>
+  <form  method="post" id="class">
+    <input   class="form-control" id="classname" type="text" name="newclass"  placeholder="new class"  >
+    <input type="button" name="button" value="ädd class" onClick="new_class()">
   </form>
 </div>
