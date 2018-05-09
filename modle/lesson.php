@@ -10,7 +10,6 @@ $conn = DBconnect();
 $contentquery = "SELECT * from user  WHERE userClassID =".$_SESSION['userClassID'];
 $stmt = $conn->prepare($contentquery);
 $stmt->execute();
-
 while ($row = $stmt->fetch())
 {
   $userClassID = $row['userClassID'];
@@ -20,7 +19,7 @@ while ($row = $stmt->fetch())
 
 <?php
 
-$sql = "INSERT INTO `lesson
+$sql = "INSERT INTO `lesson`
 VALUES ('lessonID', '".$_POST['lessonname']."', '".$_POST['tutorial']."' , '$userClassID')  WHERE userClassID =".$_SESSION['userClassID'];
 $stmt = $conn->prepare($sql);
 $stmt->execute();

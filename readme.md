@@ -31,24 +31,6 @@ student can view lesson
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
-session_start()if (isset($_SESSION['roll'])) {
-  if ($_SESSION['roll'] != '1') {
-    Header('location: index.php')
-  }
-
-}else {
-  Header('location: index.php')
-}
-
-
-session_start()if (isset($_SESSION['roll'])) {
-  if ($_SESSION['roll'] != '1') {
-    Header('location: index.php')
-  }
-
-}else {
-  Header('location: index.php')
-}
 
 
 /*
@@ -63,3 +45,15 @@ $('#sandbox-container input').datepicker({
     todayHighlight: true
 });
 */
+
+renderlesson(lessonarry){
+outHTML = '';
+for(var loop=0;loop<lessonArray.length;loop++) {
+    outHTML += '<div class="queuerow">';
+    outHTML += '<span>' + lessonArray[loop].LessonID + '</span>';
+    outHTML += '<span>' + lessonArray[loop].lessonName + '</span>';
+outHTML += '<span><a href="#" onClick="getlesson(' + lessonArray[loop].queue_ID + ')">lll</a></span>';
+    outHTML += '</div>';
+}
+document.getElementById('lessonlist').innerHTML = outHTML;
+}

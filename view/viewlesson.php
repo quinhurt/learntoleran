@@ -15,30 +15,15 @@ while ($row = $stmt->fetch())
  $lessonNAME = $row['lessonNAME'];
  $LessonID = $row['LessonID'];
 
+
  echo "$lessonNAME";
+ echo ' <a  onclick="getlesson(' . $LessonID . ')">akkkh</a>';
  ?>
- <a href="index.php?LessonID=<?php echo $row['LessonID']?>">lessonNAME</a>
+
 </div>
 <?php
 }
 
 ?>
 
-<div class="right">
-  <div class="centerpage">
-<?php
-$conn = dbConnect();
-$sql1 = "SELECT * FROM  lesson
-WHERE LessonID =".$_GET['LessonID'];
-$stmt = $conn->prepare($sql1);
-$stmt->execute();
-while ($row = $stmt->fetch())
- {
-$tutorial = $row['tutorial'];
-}
-echo "$tutorial";
-
- ?>
-</div>
-</div>
 </article>

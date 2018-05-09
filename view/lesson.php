@@ -1,6 +1,7 @@
 <?php
 include "../modle/DB.php";
 
+
 $class = '15';
 
 
@@ -9,17 +10,13 @@ $contentquery = "SELECT * FROM  lesson
 WHERE classID = $class ";
 $stmt = $conn->prepare($contentquery);
 $stmt->execute();
-while ($row = $stmt->fetch())
-  {
-?>  <div class="left"> <?php
- $lessonNAME = $row['lessonNAME'];
- $LessonID = $row['LessonID'];
+$row = $stmt->fetchAll();
 
- echo "$LessonID";
- echo "$lessonNAME";
 
- ?>
-<?php
+$tutorial = $row['tutorial'];
 
-}
+
+
+
+
  ?>
