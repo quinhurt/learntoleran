@@ -10,4 +10,6 @@ $stmt = $conn->prepare($sql1);
 $stmt->execute();
 
 
+echo $_GET['lessonID'];
+
  ?>
