@@ -4,9 +4,9 @@
 
  ?>
     <nav>
-      <a >useres </a>
-      <a>new class  </a>
-      <a > new teacher</a>
+      <a class="btn btn-primary" >useres </a>
+      <a class="btn btn-primary">new class  </a>
+      <a  class="btn btn-primary" > new teacher</a>
 
       <a href="modle/logout.php"  class="logout"> Logout</a>
     </nav>

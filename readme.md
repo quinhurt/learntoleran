@@ -32,28 +32,6 @@ student can view lesson
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
+ajax post new class in the admin area
 
-/*
-$('#sandbox-container input').datepicker({
-    format: "yyyy/mm/dd",
-    weekStart: "sunday",
-    startDate: 1901,
-    startView: 1,
-    minViewMode: 1,
-    maxViewMode: 2,
-    autoclose: true,
-    todayHighlight: true
-});
-*/
-
-renderlesson(lessonarry){
-outHTML = '';
-for(var loop=0;loop<lessonArray.length;loop++) {
-    outHTML += '<div class="queuerow">';
-    outHTML += '<span>' + lessonArray[loop].LessonID + '</span>';
-    outHTML += '<span>' + lessonArray[loop].lessonName + '</span>';
-outHTML += '<span><a href="#" onClick="getlesson(' + lessonArray[loop].queue_ID + ')">lll</a></span>';
-    outHTML += '</div>';
-}
-document.getElementById('lessonlist').innerHTML = outHTML;
-}
+ajax get select lesson echo in console log
