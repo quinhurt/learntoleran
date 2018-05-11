@@ -66,3 +66,24 @@ $('#sandbox-container input').datepicker({
     todayHighlight: true
 });
 */
+
+
+
+function new_lesson(){
+  var queueURL = "modle/lesson.php";
+  $.ajax({
+      url: queueURL,
+      method: 'post',
+      data: $('#lesson').serialize(),
+      datatype: 'json',
+      success: function(res) {
+        console.log(res);
+        document.getElementById('lessonname').value = '';
+       document.getElementById('tutorial').value = '';
+      },
+      error: function(err) {
+          console.log('err');
+          console.log(err);
+      }
+  });
+}
