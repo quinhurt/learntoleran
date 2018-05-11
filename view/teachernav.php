@@ -3,7 +3,7 @@
   <a class="btn btn-primary" >new lesson</a>
   <a class="btn btn-primary" >new assigment</a>
   <a  class="btn btn-primary" > submited assigment</a>
-  <a  class="btn btn-primary"> lessons</a>
+  <a  class="btn btn-primary" > lessons</a>
 </nav>
 
 

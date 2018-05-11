@@ -16,8 +16,7 @@ while ($row = $stmt->fetch())
  $LessonID = $row['LessonID'];
 
 
- echo "$lessonNAME";
- echo ' <a  onclick="getlesson(' . $LessonID . ')">akkkh</a>';
+  echo ' <a  onclick="getlesson(' . $LessonID . ')">' . $lessonNAME . '</a>';
  ?>
 
 </div>
