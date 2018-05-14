@@ -29,6 +29,7 @@
         echo "$surname";
       }
       ?>
+
   <br>
 <legend>teachers </legend>
   <?php

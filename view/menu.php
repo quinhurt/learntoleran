@@ -3,8 +3,6 @@
 <div class="loginmenu">
 
 <nav>
-
-
  <button class="btn btn-primary"  id="myBtn">sign up</button>
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".signup">about</button>
 </nav>
@@ -34,9 +32,6 @@
 include "about.php";
 ?>
 </div>
-
-
-
     </div>
 
 
@@ -49,12 +44,6 @@ $res_class->execute();
 
 
  ?>
-
-
-
-
-
-
 
 
 

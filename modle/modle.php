@@ -7,6 +7,6 @@ function newclass() {
   $stmt = $conn->prepare($sql);
     $stmt->execute();
     return $stmt->rowCount();
-} 
+}
 
  ?>
