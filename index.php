@@ -2,7 +2,7 @@
 <?php
 
 include "view/header.php";
-include "modle/DB.php";
+include "modle/db.php";
 include "modle/session.php";
 
  ?>

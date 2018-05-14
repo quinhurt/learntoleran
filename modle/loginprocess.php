@@ -1,6 +1,6 @@
 
 <?php
-    include 'DB.php';
+    include 'db.php';
     include 'session.php';
     $login_sql = "SELECT * FROM user WHERE username = '" . $_POST['username'] . "' AND pasword = '" .
                   $_POST['pasword'] . "';";

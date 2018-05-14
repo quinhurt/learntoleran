@@ -1,5 +1,5 @@
 <?php
-include "DB.php";
+include "db.php";
 include "session.php";
 
 
@@ -38,4 +38,5 @@ if(isset($_POST["submit"])){
 
        }echo "New record created successfully";
 }
+header('Location: ../index.php');
  ?>

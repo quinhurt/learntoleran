@@ -63,7 +63,7 @@ $res_class->execute();
 
  ?>
 <legend>NEW TEACHER</legend>
-<form action="newtecher_process.php"  method="post">
+<form action="modle/newtecher_process.php"  method="post">
   <input  class="form-control"  type="text" required placeholder="first name" name="name" >
 <input  class="form-control"  type="text"required placeholder="last name" name="lname" >
 <input  class="form-control"   name="DOB" required placeholder="date of birth">

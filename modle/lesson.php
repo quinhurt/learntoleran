@@ -1,6 +1,6 @@
 
 <?php
-include "DB.php";
+include "db.php";
 include "session.php";
 $conn = DBconnect();
 $contentquery = "SELECT * from user  WHERE userClassID =".$_SESSION['userClassID'];

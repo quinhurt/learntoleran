@@ -1,6 +1,6 @@
 
 <?php
-include "DB.php";
+include "db.php";
 
 
 

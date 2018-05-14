@@ -1,5 +1,5 @@
 <?php
-include "DB.php";
+include "db.php";
 
 $conn = DBconnect();
         $sql = "INSERT INTO `user`
