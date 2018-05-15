@@ -77,7 +77,7 @@ article{
   background-color:lightblue;
   margin-left:5%;
   height:auto;
-  
+
 }
 
 
@@ -121,4 +121,8 @@ article{
 .logout{
   float:right;
   padding-right: 2%;
+}
+
+#update,#viewlesson,#new{
+  display:none;
 }

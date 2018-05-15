@@ -32,6 +32,6 @@ student can view lesson
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
-ajax post new class in the admin area
+ajax post new class in the (admin area)
 
-ajax get select lesson echo in console log
+ajax get select lesson, lesson ID echo in console log
