@@ -8,23 +8,26 @@
   <button  class="btn btn-primary" > lessons</button>
 </nav>
 
-
+<div id="">
 <?php
-
 include 'newlesson.php';
 ?>
-
-
+</div>
+<div id="">
 <?php
 include 'newassigment.php';
 ?>
-
-
+</div>
+<div id="">
 <?php
 include "viewlesson.php";
 ?>
+</div>
+
+<div id="">
 
 
 <?php
 include "new.php";
 ?>
+</div>
