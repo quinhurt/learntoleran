@@ -27,8 +27,16 @@ student can update there user information
 student can upload assignments
 student can view assignment
 student can view lesson
+////////////////////////////////////////////////////////////////
+there is a god
+username : tarlos
+password : thegreatdivin
 
+create new admin
 
+be a admin
+be  a teacher
+be a student
 
 /////////////////////////////////////////////////////////////////////////////////////////
 

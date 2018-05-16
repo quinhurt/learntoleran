@@ -12,35 +12,25 @@ h1{
 legend{
   margin-left: 2%;
 }
-
 nav{
   height:3em;
   background-color:grey;
   width:100%;
 }
-
-
 .foot{
   margin-left: 48%;
   margin-top: 20em;
 }
-
-
 .adminmenu{
 display: none;
 }
-
 .contianer{
-
-  width:80%;
-  margin-left: 10%;
+  height: 110%;
+  width:90%;
+  margin-left: 5%;
   background-color: white;
-
 }
-
-
 body{
-
 background-color: lightblue;
 }
 .line{
@@ -48,22 +38,17 @@ background-color: lightblue;
   width: 100%;
   background-color:black;
 }
-
-
 .sorry{
 border-style: solid;
-
 }
 
 h4{
 margin: 45;
-
 }
 .right{
   width:70%;
   float: right;
   background-color: #ffffff;
-
 }
 
 .left{
@@ -77,7 +62,6 @@ article{
   background-color:lightblue;
   margin-left:5%;
   height:auto;
-
 }
 
 
@@ -123,6 +107,6 @@ article{
   padding-right: 2%;
 }
 
-#update,#viewlesson,#new{
+#update,#new{
   display:none;
 }

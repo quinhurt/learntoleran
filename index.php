@@ -18,11 +18,17 @@ include "modle/session.php";
  case '3':
          include 'view/teachernav.php';
     break;
+  case '4':
+        include 'view/god.php';
+    break;
 default:
     include 'view/menu.php';
  break;
   }
 ?>
+
+
+
 
 <?php
 include "view/footer.php";

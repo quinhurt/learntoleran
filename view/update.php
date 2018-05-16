@@ -1,5 +1,5 @@
 
-<legend>upadte you info</legend>
+<legend>update your info</legend>
 <?php
 
 

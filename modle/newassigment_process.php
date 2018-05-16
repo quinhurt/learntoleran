@@ -16,6 +16,8 @@ while ($row = $stmt->fetch())
   $userClassID = $row['userClassID'];
 }
 ?>
+
+
 <?php
 if(isset($_POST["submit"])){
     $check = getimagesize($_FILES["file"]["tmp_name"]);
@@ -25,8 +27,6 @@ if(isset($_POST["submit"])){
 ?>
 
 <?php
-
-
         $conn = dbConnect();
         $sql = "INSERT INTO assigment
         VALUES (assigmentID, '$userClassID');
