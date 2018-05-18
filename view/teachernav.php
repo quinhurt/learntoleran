@@ -10,17 +10,17 @@
 
 <div id="">
 <?php
-include 'newlesson.php';
+include 'html/newlesson.php';
 ?>
 </div>
 <div id="">
 <?php
-include 'newassigment.php';
+include 'html/newassigment.php';
 ?>
 </div>
 <div id="">
 <?php
-include "viewlesson.php";
+include "html/viewlesson.php";
 ?>
 </div>
 
@@ -28,6 +28,6 @@ include "viewlesson.php";
 
 
 <?php
-include "new.php";
+include "html/new.php";
 ?>
 </div>

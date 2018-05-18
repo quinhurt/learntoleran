@@ -30,7 +30,7 @@ student can view lesson
 ////////////////////////////////////////////////////////////////
 there is a god
 username : tarlos
-password :  thegreatdivin
+password :  thegreatdivine 
 
 create new admin
 

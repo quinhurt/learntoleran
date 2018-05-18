@@ -9,7 +9,7 @@
 
 <div id="update">
     <?php
-    include "update.php"
+    include "html/update.php"
     ?>
 </div>
     <br>
@@ -17,12 +17,12 @@
 
 
     <?php
-    include "viewlesson.php"
+    include "html/viewlesson.php"
      ?>
 </div>
 
 <div id="new">
     <?php
-    include "new.php"
+    include "html/new.php"
      ?>
 </div>

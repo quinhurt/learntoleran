@@ -45,22 +45,26 @@ $res_class->execute();
 
 </nav>
 
-
-
 <?php
-
-
-
+include "html/update.php"
  ?>
 
      <?php
-     include "update.php"
+
      ?>
 
      <?php
-     include "viewlesson.php"
+     include "html/viewlesson.php"
       ?>
 
      <?php
-     include "new.php"
+     include "html/new.php"
+      ?>
+
+      <?php
+      include 'html/newlesson.php';
+      ?>
+
+      <?php
+      include 'html/newassigment.php';
       ?>
