@@ -15,6 +15,7 @@ $conn = dbConnect();
     echo "$userID";
     echo "$name";
     echo "$surname";
+    ?> <a href="modle.suspend">suspend</a><?php
   }
   ?>
 
@@ -39,5 +40,6 @@ $userClassID = $row['userClassID']
 echo "$userID";
 echo "$name";
 echo "$userClassID";
+?> <a href="modle.suspend?ID=<?php echo $row['ID']?>">suspend</a><?php
 }
 ?>

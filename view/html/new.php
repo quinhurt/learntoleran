@@ -6,9 +6,10 @@
 
 
 $conn = dbConnect();
-$contentquery =  "SELECT * FROM collectbox
- UNION ALL
-SELECT assigmentID, ClassID,  NULL, NULL  FROM  assigment WHERE ClassID =".$_SESSION['userClassID'];
+$contentquery =  "SELECT * FROM assigment
+WHERE classID =".$_SESSION['userClassID'];
+
+  ;
 $stmt = $conn->prepare($contentquery);
 $stmt->execute();
 
@@ -17,6 +18,8 @@ while ($row = $stmt->fetch())
   $content = $row['content'];
   $file = $row['file'];
 ?>
+
+
 
 <?php
   echo "$content";

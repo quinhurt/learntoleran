@@ -40,7 +40,7 @@ $res_class->execute();
               }
               ?>
     </select>
-
+<input type="submit" name="submit" >
 </form>
 
 </nav>
@@ -49,9 +49,6 @@ $res_class->execute();
 include "html/update.php"
  ?>
 
-     <?php
-
-     ?>
 
      <?php
      include "html/viewlesson.php"
@@ -68,3 +65,19 @@ include "html/update.php"
       <?php
       include 'html/newassigment.php';
       ?>
+
+      <?php
+      include "html/newclass.php";
+
+       ?>
+
+       <?php
+
+      include "html/newteacher.php";
+        ?>
+
+
+        <?php
+
+      include "html/people.php";
+         ?>

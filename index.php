@@ -30,6 +30,7 @@ default:
 
 
 
+
 <?php
 include "view/footer.php";
  ?>

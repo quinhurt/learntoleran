@@ -29,6 +29,7 @@ function getlesson(lesson) {
         datatype: 'json',
         success: function(res) {
           console.log(res);
+          document.getElementId('someidinyourDOM').innerHTML = res;
             queueContents = res;
         },
         error: function(err) {

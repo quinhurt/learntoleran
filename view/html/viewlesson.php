@@ -1,28 +1,30 @@
 <article>
 
+  <h2>lessons</h2>
+    <?php
 
-<h2>lessons</h2>
+      $conn = dbConnect();
+        $contentquery = "SELECT * FROM  lesson
+        WHERE classID =".$_SESSION['userClassID'];
+        $stmt = $conn->prepare($contentquery);
+        $stmt->execute();
+          while ($row = $stmt->fetch())
+          {
+          ?>  <div class="left"> <?php
+             $lessonNAME = $row['lessonNAME'];
+             $LessonID = $row['LessonID'];
+
+             	echo ' <a  onclick="getlesson(' . $LessonID . ')">' . $lessonNAME . '</a>';
+           ?>
+
+          </div>
+          <?php
+            }
+          ?>
 <?php
 
-$conn = dbConnect();
-$contentquery = "SELECT * FROM  lesson
-WHERE classID =".$_SESSION['userClassID'];
-$stmt = $conn->prepare($contentquery);
-$stmt->execute();
-while ($row = $stmt->fetch())
-{
-?>  <div class="left"> <?php
- $lessonNAME = $row['lessonNAME'];
- $LessonID = $row['LessonID'];
 
-
-  echo ' <a  onclick="getlesson(' . $LessonID . ')">' . $lessonNAME . '</a>';
  ?>
 
-</div>
-<?php
-}
-
-?>
-
+      <div id="someidinyourDOM"></div>
 </article>

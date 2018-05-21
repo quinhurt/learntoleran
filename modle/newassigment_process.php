@@ -29,10 +29,7 @@ if(isset($_POST["submit"])){
 <?php
         $conn = dbConnect();
         $sql = "INSERT INTO assigment
-        VALUES (assigmentID, '$userClassID');
-        SET @lastw = LAST_INSERT_ID();
-        INSERT INTO collectbox
-         VALUES ('collectboxid',  '".$_POST['conntent']."', '$fileContent' , LAST_INSERT_ID(@lastw));";
+        VALUES (assigmentID, '".$_POST['conntent']."', '$fileContent' ,'$userClassID');";
          $stmt = $conn->prepare($sql);
          $stmt->execute();
 

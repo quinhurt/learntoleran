@@ -29,8 +29,8 @@ student can view assignment
 student can view lesson
 ////////////////////////////////////////////////////////////////
 there is a god
-username : tarlos
-password :  thegreatdivine 
+username : talos
+password :  thegreatdivine
 
 create new admin
 
