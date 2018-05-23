@@ -25,8 +25,11 @@
         $_SESSION['roll'] = 0;
     }
 
+    if(!isset($_SESSION['lessonID'])) {
+        $_SESSION['lessonID'] = 0;
+    }
 
-  
+
 /*
     if(isset($_SESSION[user_id])){
 
