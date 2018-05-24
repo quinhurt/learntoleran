@@ -5,3 +5,16 @@ Stack trace:
 #0 C:\xampp\htdocs\learntoleran\modle\viewlesson_p.php(10): PDOStatement-&gt;execute()
 #1 {main}
   thrown in <b>C:\xampp\htdocs\learntoleran\modle\viewlesson_p.php</b> on line <b>10</b><br />
+
+
+<?php
+
+if(isset($_POST["submit"])){
+    $check = getimagesize($_FILES["file"]["tmp_name"]);
+    if($check !== false){
+        $file = $_FILES['file']['tmp_name'];
+        $fileContent = addslashes(file_get_contents($file));
+      }
+}
+
+ ?>

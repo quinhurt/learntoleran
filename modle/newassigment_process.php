@@ -15,13 +15,16 @@ $conn = DBconnect();
       }
 ?>
 
-
 <?php
-if(isset($_POST["submit"])){
-    $check = getimagesize($_FILES["file"]["tmp_name"]);
-    if($check !== false){
-        $file = $_FILES['file']['tmp_name'];
-        $fileContent = addslashes(file_get_contents($file));
+if (isset($_FILES['file'])) {
+    $destination_path = './file/' . $_FILES['file']['name'];
+    move_uploaded_file($_FILES['file']['tmp_name'], $destination_path);
+    $fileContent = $_FILES['file']['name'];
+} else {
+    $fileContent = '';
+}
+
+
 
         $conn = dbConnect();
         $sql = "INSERT INTO assigment
@@ -29,8 +32,8 @@ if(isset($_POST["submit"])){
          $stmt = $conn->prepare($sql);
          $stmt->execute();
 
-       }
-}
+
+
 echo "New record created successfully";
 header('Location: ../index.php');
  ?>

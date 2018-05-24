@@ -23,7 +23,7 @@ while ($row = $stmt->fetch())
 
 <?php
   echo "$content";
-  echo '<a href="$file">$file</a>';
+  echo "$file";
 }
  ?>
 
