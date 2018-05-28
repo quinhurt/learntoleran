@@ -14,7 +14,7 @@
 
 
     <!-- Customisations -->
-    <script src="control/formVladtion.js" defer></script>
+    <script src="control/formvladtion.js" defer></script>
     <script src="view/js/script.js" defer></script>
     <link href="view/css/main.css" rel="stylesheet" type="text/css">
 

@@ -17,9 +17,10 @@
     } else {
         $_SESSION['userid'] = $result['userID'];
         $_SESSION['roll'] = $result['roll'];
+        $_SESSION['active'] = $result['active'];
         $_SESSION['userClassID'] = $result['userClassID'];
         $_SESSION['message'] = "Login successful";
-        header('Location: ../index.php?');
+          header('Location: ../index.php?');
         $_SESSION['login'] = "login successful";
   }
 ?>

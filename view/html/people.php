@@ -2,7 +2,7 @@
  <?php
 
 $conn = dbConnect();
-  $contentquery = "SELECT userID, name, surname, userClassID FROM user  where roll = 2";
+  $contentquery = "SELECT userID, name, surname, userClassID FROM user  where roll = 2 and active = 1";
   $stmt = $conn->prepare($contentquery);
   $stmt->execute();
   while ($row = $stmt->fetch())
@@ -15,7 +15,7 @@ $conn = dbConnect();
     echo "$userID";
     echo "$name";
     echo "$surname";
-    ?> <a href="modle.suspend">suspend</a><?php
+    ?> <a href="modle/suspend.php?ID=<?php echo $row['userID']?>">suspend</a><?php
   }
   ?>
 
@@ -24,7 +24,7 @@ $conn = dbConnect();
 <?php
 
 $conn = dbConnect();
-$contentquery = "SELECT userID, name, surname, userClassID FROM user  where roll =3";
+$contentquery = "SELECT userID, name, surname, userClassID FROM user  where roll =3 and active = 1 ";
 $stmt = $conn->prepare($contentquery);
 $stmt->execute();
 while ($row = $stmt->fetch())
@@ -40,6 +40,8 @@ $userClassID = $row['userClassID']
 echo "$userID";
 echo "$name";
 echo "$userClassID";
-?> <a href="modle.suspend?ID=<?php echo $row['ID']?>">suspend</a><?php
+?> <a href="modle/suspend.php?ID=<?php echo $row['userID']?>">suspend</a>
+
+<?php
 }
 ?>

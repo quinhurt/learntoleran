@@ -3,13 +3,13 @@
 include "db.php";
 include "session.php";
 $conn = DBconnect();
-$contentquery = "SELECT * from user  WHERE userClassID =".$_SESSION['userClassID'];
-$stmt = $conn->prepare($contentquery);
-$stmt->execute();
-while ($row = $stmt->fetch())
-{
-  $userClassID = $row['userClassID'];
-  }
+  $contentquery = "SELECT * from user  WHERE userClassID =".$_SESSION['userClassID'];
+    $stmt = $conn->prepare($contentquery);
+      $stmt->execute();
+      while ($row = $stmt->fetch())
+      {
+        $userClassID = $row['userClassID'];
+        }
 ?>
 
 
@@ -17,8 +17,8 @@ while ($row = $stmt->fetch())
 
 <?php
 $sql = "INSERT INTO `lesson`
-VALUES ('lessonID', '".$_POST['lessonname']."', '".$_POST['tutorial']."' , '$userClassID')";
-$stmt = $conn->prepare($sql);
-$stmt->execute();
-header('Location: ../index.php?');
+    VALUES ('lessonID', '".$_POST['lessonname']."', '".$_POST['tutorial']."' , '$userClassID')";
+      $stmt = $conn->prepare($sql);
+      $stmt->execute();
+      header('Location: ../index.php?');
  ?>

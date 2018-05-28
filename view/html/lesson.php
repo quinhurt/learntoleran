@@ -16,7 +16,4 @@ $row = $stmt->fetchAll();
 $tutorial = $row['tutorial'];
 
 
-
-
-
  ?>

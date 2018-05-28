@@ -8,7 +8,6 @@ function edittaem(elem){
 
 ///////////////////////student nav ////////////////////////////////////////
 function change(){
-
   if(document.getElementById('update').style.display=='none')
   {
     document.getElementById('update').style.display = 'block';
@@ -40,6 +39,8 @@ function change(){
         }
   }
 ///////////////////////teacher nav ////////////////////////////////////////
-
+function change(){
+  document.getElementByClass('studentnav').style.display = 'none';
+}
 
 ///////////////////////////////

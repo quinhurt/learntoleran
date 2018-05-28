@@ -28,8 +28,13 @@ default:
 ?>
 
 
-
-
+<?php
+switch($_SESSION['active']) {
+  case '2':
+ header('Location: view/html/suspened.php');
+default:
+ }
+ ?>
 
 <?php
 include "view/footer.php";
