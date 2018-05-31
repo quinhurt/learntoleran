@@ -3,8 +3,13 @@
 
 
 <div class="line">
-
 </div>
+<div id="browserCheck">
+</div>
+
+<script>
+		document.getElementById("browserCheck").innerHTML = "Mobile Browser: " + isMobile() + "\nIt is: " + BrowserCheck() + " Browser";
+</script>
 
 <?php
 echo $_SESSION['active'];

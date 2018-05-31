@@ -16,13 +16,11 @@ $conn = DBconnect();
 ?>
 
 <?php
-if (isset($_FILES['file'])) {
-    $destination_path = './file/' . $_FILES['file']['name'];
-    move_uploaded_file($_FILES['file']['tmp_name'], $destination_path);
-    $fileContent = $_FILES['file']['name'];
-} else {
-    $fileContent = '';
-}
+if(isset($_POST["submit"])){
+    $check = basename($_FILES["assignment"]["tmp_name"]);
+    if($check !== false){
+        $assignment = $_FILES['assignment']['tmp_name'];
+        $fileContent = addslashes(file_get_contents($assignment));
 
 
 
@@ -36,4 +34,7 @@ if (isset($_FILES['file'])) {
 
 echo "New record created successfully";
 header('Location: ../index.php');
+}
+}
+
  ?>

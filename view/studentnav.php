@@ -18,7 +18,7 @@
      ?>
 </div>
 
-<div  class="studentnav" id="new">
+<div  class="studentnav" >
     <?php
     include "html/new.php"
      ?>

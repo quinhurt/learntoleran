@@ -51,3 +51,12 @@ if(isset($_POST["submit"])){
            document.getElementById('new').style.display = 'none';
          }
    }
+
+
+   if (isset($_FILES['file'])) {
+       $destination_path = './file/' . $_FILES['file']['name'];
+       move_uploaded_file($_FILES['file']['tmp_name'], $destination_path);
+       $fileContent = $_FILES['file']['name'];
+   } else {
+       $fileContent = '';
+   }

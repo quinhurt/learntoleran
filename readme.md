@@ -28,9 +28,9 @@ student can upload assignments
 student can view assignment
 student can view lesson
 ////////////////////////////////////////////////////////////////
-there is a god
+user that can do anything
 username : talos
-password :  thegreatdivine
+password :  9divine
 
 create new admin
 
