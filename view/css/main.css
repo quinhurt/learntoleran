@@ -12,11 +12,7 @@ h1{
 legend{
   margin-left: 2%;
 }
-nav{
-  height:3em;
-  background-color:grey;
-  width:100%;
-}
+
 .foot{
   margin-left: 48%;
   margin-top: 20em;
@@ -105,8 +101,4 @@ article{
 .logout{
   float:right;
   padding-right: 2%;
-}
-
-#update,#new{
-  display:none;
 }
