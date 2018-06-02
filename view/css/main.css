@@ -5,7 +5,6 @@
   margin-top:5em;
 }
 
-
 h1{
   margin-left: 5%;
 }
@@ -101,4 +100,17 @@ article{
 .logout{
   float:right;
   padding-right: 2%;
+}
+
+input:invalid{
+  color:red;
+}
+input:valid:{
+  color:green;
+}
+input:focus{
+  background-color:yellow;
+}
+input:focus{
+  background-color:yellow;
 }
