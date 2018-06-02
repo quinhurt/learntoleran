@@ -43,3 +43,6 @@ be a student
 ajax post new class in the (admin area)
 
 ajax get select lesson, lesson ID echo in console log
+
+
+file up load in teacher user 
