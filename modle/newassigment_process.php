@@ -25,8 +25,8 @@ if(isset($_POST["submit"])){
 
 
         $conn = dbConnect();
-        $sql = "INSERT INTO assigment
-          VALUES (assigmentID, '".$_POST['conntent']."', '$fileContent' ,'$userClassID');";
+        $sql = "INSERT INTO assigment  (content, file, ClassID)
+          VALUES ( '".$_POST['conntent']."', '$fileContent' ,'$userClassID');";
          $stmt = $conn->prepare($sql);
          $stmt->execute();
 

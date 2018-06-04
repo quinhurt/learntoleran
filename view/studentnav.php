@@ -33,7 +33,7 @@
   <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"><?php     ?></div>
   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"> <?php include "html/viewlesson.php"  ?></div>
   <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"><?php include "html/new.php" ?></div>
-  <div class="tab-pane fade" id="pills-dropbox" role="tabpanel" aria-labelledby="pills-dropbox-tab"><?php ?></div>
+  <div class="tab-pane fade" id="pills-dropbox" role="tabpanel" aria-labelledby="pills-dropbox-tab"><?php  include "html/submit.php" ?></div>
 </div>
 
 

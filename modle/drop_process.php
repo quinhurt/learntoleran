@@ -15,8 +15,8 @@ if(isset($_POST["submit"])){
 
 
         $conn = dbConnect();
-        $sql = "INSERT INTO dropbox
-          VALUES (dropboxID, '".$_POST['conntent']."' , '$fileContent' , null  );";
+        $sql = "INSERT INTO dropbox (comassigment, assignmet, grade)
+          VALUES ( '".$_POST['conntent']."' , '$fileContent' , null  );";
          $stmt = $conn->prepare($sql);
          $stmt->execute();
 

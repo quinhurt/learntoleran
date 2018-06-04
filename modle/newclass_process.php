@@ -5,8 +5,8 @@ include "db.php";
 
 
 
-        $sql = "INSERT INTO class
-        VALUES ('ClassID', '".$_POST['newclass']."');";
+        $sql = "INSERT INTO class (className)
+        VALUES ( '".$_POST['newclass']."');";
         $conn = dbConnect();
         $stmt = $conn->prepare($sql);
         $stmt ->execute();

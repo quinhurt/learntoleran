@@ -16,8 +16,8 @@ $conn = DBconnect();
 
 
 <?php
-$sql = "INSERT INTO `lesson`
-    VALUES ('lessonID', '".$_POST['lessonname']."', '".$_POST['tutorial']."' , '$userClassID')";
+$sql = "INSERT INTO `lesson`  (lessonName, tutorial, classID)
+    VALUES ( '".$_POST['lessonname']."', '".$_POST['tutorial']."' , '$userClassID')";
       $stmt = $conn->prepare($sql);
       $stmt->execute();
       if($stmt->rowcount() == 0) {

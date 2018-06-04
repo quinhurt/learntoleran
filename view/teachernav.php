@@ -12,7 +12,7 @@
       <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-lesson" role="tab" aria-controls="pills-home" aria-selected="true">New lesson</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-assignment" role="tab" aria-controls="pills-profile" aria-selected="false">lesson</a>
+      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-assignment" role="tab" aria-controls="pills-profile" aria-selected="false">new assignmenrt</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-new" role="tab" aria-controls="pills-contact" aria-selected="false">lesson</a>
