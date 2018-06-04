@@ -20,7 +20,6 @@ $res_class->execute();
                 echo '>' . $row_class['className'] . '</option>';
             }
             ?>
-
   </select>
 <input class="form-control" type="text"required placeholder="password" name="password" id="pasword">
   <input type="submit" name="submit"  onclick="student()">

@@ -1,55 +1,47 @@
 <div class="sorry">
-<h2>new assignment</h2>
+<h2>drop box</h2>
 
 <?php
-$sql_drop = "SELECT * FROM grade";
+$sql_box = "SELECT * FROM grade";
 $conn = dbConnect();
-$res_drop = $conn->prepare($sql_drop);
-$res_drop->execute();
+$res_box = $conn->prepare($sql_box);
+$res_box->execute();
  ?>
 
 <?php
 
 
 $conn = dbConnect();
-$contentquery =  "SELECT * FROM dropbox";
+$contentquery =  "SELECT `dropboxID`, `comassigment`, `grade` FROM `dropbox` WHERE 1";
 $stmt = $conn->prepare($contentquery);
 $stmt->execute();
+$result = $stmt->fetchAll();
+print '<pre>';
+foreach($result as $row){
+  print_r($row);
 
-while ($row = $stmt->fetch())
-{
+print '</pre>';
+    ?> <a href="modle/download.php?dropboxID=" ></a>
 
-  $comassigment = $row['comassigment'];
-  $assgnment = $row['assignmet'];
-  $grade = $row['grade'];
-?>
-
-
-
-
-
-<?php
-  echo "$content";
-  ?> <a href="modle/download.php?assigmentID=<?php echo $row['assigmentID'] ?>" > <?php echo $content ?></a>
-
-<form action="modle/gradeprocess.php" method="post">
-<select name="grade">
-<?php
-while ($row_drop = $res_drop->fetch(PDO::FETCH_ASSOC)) {
-    echo '<option value= "' . $row_drop['grade'] . '" ';
-
-    echo '>' . $row_drop['grade'] . '</option>';
-}
- ?>
-</select>
-<input type="submit">
-</form> <br>
-
+<form  action="modle/gradeprocess.php?dropboxID=<?php echo $row['dropboxID'] ?>; " method="post">
   <?php
+  $sql_box = "SELECT * FROM grade";
+  $conn = dbConnect();
+  $res_box = $conn->prepare($sql_box);
+  $res_box->execute();
+   ?>
+    <select class="form-control" name="grade" >
+       <option value="A">A</option>
+       <option value="B">B</option>
+       <option value="C">C</option>
+       <option value="D">D</option>
+    </select>
+    <input type="submit" >
+</form>
+
+<?php
 }
  ?>
-
-
 <h3>sorry this feature off the website is unviable at the current time</h3>
 
 </div>

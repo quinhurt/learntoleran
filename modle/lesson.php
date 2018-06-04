@@ -20,9 +20,15 @@ $sql = "INSERT INTO `lesson`
     VALUES ('lessonID', '".$_POST['lessonname']."', '".$_POST['tutorial']."' , '$userClassID')";
       $stmt = $conn->prepare($sql);
       $stmt->execute();
+      if($stmt->rowcount() == 0) {
+        header('Location: ../index.php');
+        $_SESSION['error'] = "lesson faild please try again";
 
-      
-      header('Location: ../index.php?');
 
 
+      } else {
+
+            header('Location: ../index.php?');
+          $_SESSION['lesson'] = "login successful";
+    }
  ?>

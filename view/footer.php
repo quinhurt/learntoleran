@@ -2,6 +2,7 @@
 
 
 
+
 <?php
 $t=time();
 
@@ -14,14 +15,20 @@ echo(date("Y-m-d",$t));
 <div id="browserCheck">
 </div>
 
-<script>
-		document.getElementById("browserCheck").innerHTML = "Mobile Browser: " + isMobile() + "\nIt is: " + BrowserCheck() + " Browser";
-</script>
+
 
 <?php
 echo $_SESSION['active'];
  ?>
+ <div class="">
+ 	<p id="browserCheck">Mobile Browser: false
+ It is: CHROME Browser</p>
 
+ </div>
+ <script type="text/javascript">
+
+ 	document.getElementById("browserCheck").innerHTML = "Mobile Browser: " + isMobile() + "\nIt is: " + BrowserCheck() + " Browser";
+ </script>
 
 <script>
 

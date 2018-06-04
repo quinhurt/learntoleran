@@ -39,5 +39,5 @@
 
 <?php
 
-echo "$_SESSION";
+//echo "$_SESSION";
  ?>

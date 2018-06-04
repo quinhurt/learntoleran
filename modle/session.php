@@ -30,6 +30,9 @@
     if(!isset($_SESSION['active'])) {
         $_SESSION['active'] = 0;
     }
+
+
+
 /*
     if(isset($_SESSION[user_id])){
 
