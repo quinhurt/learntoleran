@@ -54,9 +54,10 @@ $res_class->execute();
   <div class="modal-content">
     <span class="close">&times;</span>
     <form action="modle/signup_process.php"  method="post">
-      <input class="form-control"id="name" type="text" required placeholder="first name" name="name" pattern="[A-Za-z]{3,20}" >
+      <input class="form-control" id="name" type="text" required placeholder="first name" name="name" class="" pattern="[A-Za-z]{3,20}" >
     <input class="form-control" id="lname" type="text"required placeholder="last name" name="lname" pattern="[A-Za-z]{3,20}" >
-    <input  class="form-control" type="text"  id="DOB" name="DOB" required placeholder="date of birth">
+    <input  class="form-control "  id="datepicker" type="text"  name="DOB" required placeholder="date of birth">
+
     <select class="form-control" name="class" style="width: 200px">
                 <?php
                 while ($row_class = $res_class->fetch(PDO::FETCH_ASSOC)) {
@@ -66,6 +67,7 @@ $res_class->execute();
                 }
                 ?>
       </select>
+
 
     <input class="form-control" id="username" type="text"required placeholder="username" name="username" pattern="[A-Za-z0.9]{3,20}" >
     <input class="form-control" id="password" type="password"required placeholder="password" name="password" pattern="[A-Za-z0-9]{3,20}" >
@@ -78,6 +80,13 @@ $res_class->execute();
 
 
 
+<script>
+    $('#datepicker').datepicker({
+        uiLibrary: 'bootstrap4';
+        format: yyyy-mm-dd;
+
+    });
+</script>
 
 <script>
 // Get the modal

@@ -3,16 +3,6 @@ include "db.php";
 include "session.php";
 
 
-
-$conn = DBconnect();
-  $contentquery = "SELECT * from user  WHERE userClassID =".$_SESSION['userClassID'];
-    $stmt = $conn->prepare($contentquery);
-      $stmt->execute();
-
-      while ($row = $stmt->fetch())
-      {
-        $userClassID = $row['userClassID'];
-      }
 ?>
 
 <?php
@@ -26,14 +16,14 @@ if(isset($_POST["submit"])){
 
         $conn = dbConnect();
         $sql = "INSERT INTO dropbox
-          VALUES (assigmentID, '".$_POST['conntent']."', '$fileContent' ,'$userClassID');";
+          VALUES (dropboxID, '".$_POST['conntent']."' , '$fileContent' , null  );";
          $stmt = $conn->prepare($sql);
          $stmt->execute();
 
 
 
 echo "New record created successfully";
-header('Location: ../index.php');
+header('Location: ../index.php?');
 }
 }
 

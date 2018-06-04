@@ -2,6 +2,13 @@
 
 
 
+<?php
+$t=time();
+
+echo(date("Y-m-d",$t));
+?>
+
+
 <div class="line">
 </div>
 <div id="browserCheck">
