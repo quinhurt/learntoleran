@@ -21,12 +21,13 @@ if(isset($_POST["submit"])){
     if($check !== false){
         $assignment = $_FILES['assignment']['tmp_name'];
         $fileContent = addslashes(file_get_contents($assignment));
+        $filename = $_FILES['assignment']['name'];
 
 
 
         $conn = dbConnect();
-        $sql = "INSERT INTO assigment  (content, file, ClassID)
-          VALUES ( '".$_POST['conntent']."', '$fileContent' ,'$userClassID');";
+        $sql = "INSERT INTO assigment  (content,  file,filename, ClassID)
+          VALUES ( '".$_POST['conntent']."', '$fileContent', '$filename', '$userClassID');";
          $stmt = $conn->prepare($sql);
          $stmt->execute();
 

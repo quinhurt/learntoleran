@@ -24,6 +24,9 @@ while ($row = $stmt->fetch())
 
 <?php
   echo "$content";
+  echo "$assgment";
+
+
   ?> <a href="modle/download.php?assigmentID=<?php echo $row['assigmentID'] ?>"  > <?php echo $content ?></a> <?php
 }
  ?>
