@@ -1,5 +1,6 @@
 
   function new_class(){
+    show()
     var queueURL = "modle/newclass_process.php";
     $.ajax({
         url: queueURL,
@@ -7,16 +8,39 @@
         data: $('#class').serialize(),
         datatype: 'json',
         success: function(res) {
+
           console.log(res);
           document.getElementById('classname').value = '';
-
+          hide()
         },
         error: function(err) {
+          hide()
             console.log('err');
             console.log(err);
         }
     });
 }
+
+
+function show(){
+  var x = document.getElementById("svg");
+  if (x.style.display === "block") {
+  } else {
+      x.style.display = "block";
+  }
+}
+
+
+function hide(){
+var x = document.getElementById("svg");
+if (x.style.display === "none") {
+} else {
+    x.style.display = "none";
+}
+}
+
+
+
 
 
 function getlesson(lesson) {
@@ -48,17 +72,15 @@ function getlesson(lesson) {
 
 
 
-
-
-    function lessonname() {
-        var queueURL = "modle/.php?lessonID=";
+    function classlist() {
+        var queueURL = "json.php";
         $.ajax({
             url: queueURL,
             method: 'get',
             datatype: 'json',
-            success: function(go) {
+            success: function(res) {
               console.log(res);
-              renlessonname(res);
+              renderclass(res);
             },
             error: function(err) {
                 console.log('err');

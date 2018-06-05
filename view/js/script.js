@@ -8,9 +8,10 @@ function edittaem(elem){
 
 
 
+
 ///////////////////////////////
 
-
+/*
 $('#eventForm').formValidation({
     framework: 'bootstrap',
     icon: {
@@ -31,7 +32,7 @@ $('#eventForm').formValidation({
             }
         }
     }
-});
+});   */
 
 
 

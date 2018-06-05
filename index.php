@@ -28,6 +28,38 @@ default:
 ?>
 
 
+<div id="svg">
+<?php
+
+
+include "view/svg.svg"
+ ?>
+hello world
+</div>
+
+
+
+<script>
+
+
+</script>
+
+
+<?php
+/*
+if(isset($_SESSION['userClassID'])) {
+      include 'view/html/classlist.php';
+  }   */
+
+ ?>
+
+
+
+
+
+
+
+
 <?php
 switch($_SESSION['active']) {
   case '2':

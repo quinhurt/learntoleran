@@ -108,3 +108,7 @@ input:invalid{
 input:valid:{
   color:green;
 }
+
+#svg{
+  display: none;
+}

@@ -27,18 +27,18 @@ echo $_SESSION['active'];
  </div>
  <script type="text/javascript">
 
- 	document.getElementById("browserCheck").innerHTML = "Mobile Browser: " + isMobile() + "\nIt is: " + BrowserCheck() + " Browser";
+ 	//document.getElementById("browserCheck").innerHTML = "Mobile Browser: " + isMobile() + "\nIt is: " + BrowserCheck() + " Browser";
  </script>
 
 <script>
-
+/*
 function detectmob() {
  if(window.innerWidth <= 800 && window.innerHeight <= 600) {
    return true;
  } else {
    return false;
  }
-}
+}  */
 </script>
 
 <section>

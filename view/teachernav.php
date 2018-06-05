@@ -23,6 +23,8 @@
     <li class="nav-item">
       <a class="nav-link" id="pills-drop-tab" data-toggle="pill" href="#pills-drop" role="tab" aria-controls="pills-drop" aria-selected="false">dropbox</a>
     </li>
+    <a class="nav-link" id="pills-class-tab" data-toggle="pill" href="#pills-class" role="tab" aria-controls="pills-class" aria-selected="false">class list</a>
+  </li>
   </ul>
 
 
@@ -38,6 +40,7 @@
   <div class="tab-pane fade" id="pills-new" role="tabpanel" aria-labelledby="pills-contact-tab"><?php  include "html/viewlesson.php"; ?></div>
   <div class="tab-pane fade" id="pills-view" role="tabpanel" aria-labelledby="pills-contact-tab"><?php  include "html/new.php" ?></div>
   <div class="tab-pane fade" id="pills-drop" role="tabpanel" aria-labelledby="pills-drop-tab"><?php  include "html/dropbox.php" ?></div>
+  <div class="tab-pane fade" id="pills-class" role="tabpanel" aria-labelledby="pills-class-tab"><?php  include "html/classlist.php" ?></div>
 </div>
 
 
