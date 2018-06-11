@@ -10,12 +10,7 @@
         {
           $userClassID = $row['userClassID'];
           }
-  ?>
 
-
-
-
-  <?php
     $sql = "INSERT INTO `lesson`  (lessonName, tutorial, classID)
             VALUES ( '".$_POST['lessonname']."', '".$_POST['tutorial']."' , '$userClassID')";
           $stmt = $conn->prepare($sql);

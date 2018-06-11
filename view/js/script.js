@@ -6,68 +6,73 @@ function edittaem(elem){
 }
 
 
+$(document).ready(function(){
+  var date_input=$('input[name="dob"]'); //our date input has the name "date"
+  var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+  date_input.datepicker({
+    format: 'yyyy-mm-dd',
+    container: container,
+    todayHighlight: true,
+    autoclose: true,
+  })
+})
 
 
-
-///////////////////////////////
-
-/*
-$('#eventForm').formValidation({
-    framework: 'bootstrap',
-    icon: {
-        ...
-    },
-    fields: {
-        selectedDate: {
-            // The hidden input will not be ignored
-            excluded: false,
-            validators: {
-                notEmpty: {
-                    message: 'The date is required'
-                },
-                date: {
-                    format: 'MM/DD/YYYY',
-                    message: 'The date is not a valid'
-                }
-            }
-        }
-    }
-});   */
-
-
-//This is the function to check for a mobile device:
-  function isMobile() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test( navigator.userAgent );
+function isMobile() {
+ if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ ){
+    lert('Opera');
   }
-  function BrowserCheck() {
-    // Opera 8.0+
-    var isOpera = ( !!window.opr && !!opr.addons ) || !!window.opera || navigator.userAgent.indexOf( ' OPR/' ) >= 0;
-    // Firefox 1.0+
-    var isFirefox = typeof InstallTrigger !== 'undefined';
-    // Safari 3.0+ "[object HTMLElementConstructor]"
-    var isSafari = /constructor/i.test( window.HTMLElement ) || ( function ( p ) {
-      return p.toString() === "[object SafariRemoteNotification]";
-    } )( !window[ 'safari' ] || ( typeof safari !== 'undefined' && safari.pushNotification ) );
-    // Internet Explorer 6-11
-    var isIE = /*@cc_on!@*/ false || !!document.documentMode;
-    // Edge 20+
-    var isEdge = !isIE && !!window.StyleMedia;
-    // Chrome 1+
-    var isChrome = !!window.chrome && !!window.chrome.webstore;
-    // Blink engine detection
-    var isBlink = ( isChrome || isOpera ) && !!window.CSS;
-    //Check if browser is IE
-    if ( isIE ) {
-      // insert conditional IE code here
-      return "INTERNET EXPLORER";
-    }
-    //Check if browser is Chrome
-    else if (isChrome) {
-      // insert conditional Chrome code here
-      return "CHROME";
-    }
-    //Check if browser is Firefox
-    else if ( isFirefox ) {
-      // insert conditional Firefox Code here
-      return "FIREFOX";
-    }
+ else {
+    alert('unknown');
+  }
+}
+
+
+
+
+function myFunction() {
+    if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 )
+   {
+       alert('Opera');
+   }
+   else if(navigator.userAgent.indexOf("Chrome") != -1 )
+   {
+       alert('Chrome');
+   }
+   else if(navigator.userAgent.indexOf("Safari") != -1)
+   {
+       alert('Safari');
+   }
+   else if(navigator.userAgent.indexOf("Firefox") != -1 )
+   {
+        alert('Firefox');
+   }
+   else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) //IF IE > 10
+   {
+     alert('IE');
+   }
+   else
+   {
+      alert('unknown');
+   }
+   }
+
+
+
+   $(document).ready(function(){
+ 		var date_input=$('input[name="dob"]'); //our date input has the name "date"
+ 		var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+ 		date_input.datepicker({
+ 			format: 'yyyy-mm-dd',
+ 			container: container,
+ 			todayHighlight: true,
+ 			autoclose: true,
+ 		})
+ 	})

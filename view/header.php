@@ -18,6 +18,8 @@
     <link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.6/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 
 
+    <link href="view/css/editor.css" type="text/css" rel="stylesheet"/>
+      <script src="view/js/editor.js"></script>
 
 
     <!-- Customisations -->
@@ -27,11 +29,11 @@
 
 
 
-</head>
+  </head>
 <body>
   <div class="contianer">
 
 
 
     <h1>Learn to Learn</h1>
-    hello world 
+    hello world
