@@ -25,13 +25,17 @@
         $_SESSION['roll'] = 0;
     }
 
-
-
     if(!isset($_SESSION['active'])) {
         $_SESSION['active'] = 0;
     }
 
 
+
+
+
+
+    //$_SESSION['data'] = $_POST['data'];
+    //$_SESSION['data_another'] = $_POST['data_another'];
 
 /*
     if(isset($_SESSION[user_id])){

@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>learn to learn</title>
+    <title>Learn to Learn</title>
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -22,7 +22,7 @@
 
     <!-- Customisations -->
     <script src="control/formvladtion.js" defer></script>
-    <script src="view/js/script.js" defer></script>
+    <script src="view/js/script.js" ></script>
     <link href="view/css/main.css" rel="stylesheet" type="text/css">
 
 
@@ -33,4 +33,5 @@
 
 
 
-    <h1>learn to learn</h1>
+    <h1>Learn to Learn</h1>
+    hello world 

@@ -1,5 +1,5 @@
-<article>
-
+<article class="box">
+<div  class="right" id="someidinyourDOM"></div>
   <h2>lessons</h2>
     <?php
 
@@ -14,17 +14,14 @@
              $lessonNAME = $row['lessonNAME'];
              $LessonID = $row['LessonID'];
 
-             	echo '<a  onclick="getlesson(' . $LessonID . ')">' . $lessonNAME . '</a>';
+             	echo '<a class="block" onclick="getlesson(' . $LessonID . ')">' . $lessonNAME . '</a>';
            ?>
 
           </div>
           <?php
             }
           ?>
-<?php
 
 
-     ?>
 
-      <div id="someidinyourDOM"></div>
 </article>

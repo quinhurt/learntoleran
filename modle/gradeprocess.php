@@ -1,15 +1,15 @@
-<?php
+  <?php
 
-  include "db.php";
+    include "db.php";
 
-  $conn = dbConnect();
-  $sql ="UPDATE  dropbox SET  grade = '".$_POST['grade']."' 
-        WHERE dropboxID = " .$_GET['dropboxID'];
-  $conn = dbConnect();
-   $stmt = $conn->prepare($sql);
-   $stmt->execute();
-   echo "done";
+    $conn = dbConnect();
+    $sql ="UPDATE  dropbox SET  grade = '".$_POST['grade']."'
+          WHERE dropboxID = " .$_GET['dropboxID'];
+    $conn = dbConnect();
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    echo "done";
 
+    header('Location: ../index.php?');
 
-
- ?>
+   ?>

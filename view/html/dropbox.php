@@ -21,7 +21,7 @@ foreach($result as $row){
   print_r($row);
 
 print '</pre>';
-    ?> <a href="modle/download.php?dropboxID=" ></a>
+    ?> <a href="modle/download2.php?dropboxID=" ></a>
 
 <form  action="modle/gradeprocess.php?dropboxID=<?php echo $row['dropboxID'] ?>; " method="post">
   <?php

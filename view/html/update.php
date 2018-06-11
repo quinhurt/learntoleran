@@ -23,6 +23,7 @@ WHERE userID =".$_SESSION['userid'];
     echo '<input  class="form-control"  type="text" placeholder="date of birth"  name="DOB" value="'.$DOB.'">';
     echo '<input  class="form-control"  type="text" placeholder="password"      pattern="[A-Za-z0.9]{3,20}" name="pasword" id="pasword" value= "'.$pasword.'">';
     echo ' <input type="submit" name="updat"  onclick="edittaem(this)"  >';
+    echo '</form>';
 ?>
 <br>
 <br>
@@ -32,10 +33,6 @@ echo "$surname   ";
 echo "$DOB   ";
 echo "$pasword  ";
 echo "$UserCLassID   ";
-
-
-
-
 
 ?>
 

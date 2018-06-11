@@ -1,6 +1,9 @@
-<?php
-
- ?>
 
 
-<button type="button" name="button" onClick="classlist()" >show class list</button>
+<button type="button" name="button" onclick="classlist()">class list </button>
+
+
+
+<div id="someclass">
+
+</div>

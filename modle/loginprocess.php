@@ -2,8 +2,7 @@
 <?php
     include 'db.php';
     include 'session.php';
-    $login_sql = "SELECT * FROM user WHERE username = '" . $_POST['username'] . "' AND pasword = '" .
-                  $_POST['pasword'] . "';";
+    $login_sql = "SELECT * FROM user WHERE username = '" . $_POST['username'] . "' AND pasword = '" .  $_POST['pasword'] . "';";
     $conn = dbConnect();
     $stmt = $conn->prepare($login_sql);
     $stmt->execute();
@@ -11,6 +10,7 @@
     if($stmt->rowcount() == 0) {
       header('Location: ../index.php');
       $_SESSION['error'] = "Login invalid please try again";
+
 
 
 
@@ -22,5 +22,6 @@
         $_SESSION['message'] = "Login successful";
           header('Location: ../index.php?');
         $_SESSION['login'] = "login successful";
+
   }
 ?>

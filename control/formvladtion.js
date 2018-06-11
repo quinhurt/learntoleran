@@ -65,26 +65,7 @@ function getlesson(lesson) {
       outHTML = '';
     for(var loop=0;loop<lessonArry.length;loop++){
       outHTML += '<div class"lesson">';
-      outHTML += '<span>' + lessonArry[loop].tutorial + '</span>';
+      outHTML += '<span class"right" >' + lessonArry[loop].tutorial + '</span>';
       outHTML += '</div>';
     }  document.getElementById('someidinyourDOM').innerHTML = lessonArry.tutorial;
-    }
-
-
-
-    function classlist() {
-        var queueURL = "json.php";
-        $.ajax({
-            url: queueURL,
-            method: 'get',
-            datatype: 'json',
-            success: function(res) {
-              console.log(res);
-              renderclass(res);
-            },
-            error: function(err) {
-                console.log('err');
-                console.log(err);
-            }
-        });
     }

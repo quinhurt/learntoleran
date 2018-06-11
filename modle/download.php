@@ -1,68 +1,37 @@
-<?php
-include "db.php";
+
+  <?php
+  include "db.php";
 
 
+    $conn = DBconnect();
+    $sql = "SELECT * from assigment WHERE assigmentID=" .$_GET['assigmentID'];
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+      while ($row = $stmt->fetch())
+      {
+       $file = $row['file'];
+       $filename = $row['filename'];
 
 
+       $filePath =  $file;
+       if(!empty($filename) && file_exists($filePath)){
 
-$conn = DBconnect();
-$sql = "SELECT * from assigment WHERE assigmentID=" .$_GET['assigmentID'];
-"SELECT OCTET_LENGTH(blob_content) FROM assigment WHERE assigmentID =".$_GET['assigmentID'];
-$stmt = $conn->prepare($sql);
-$stmt->execute();
-  while ($row = $stmt->fetch())
-  {
-   $file = $row['file'];
-   $filename = $row['filename'];
-   $size= $row['OCTET_LENGTH(blob_content)'];
+           header("Cache-Control: public");
+           header("Content-Description: File Transfer");
+           header("Content-Disposition: attachment; filename=$filename");
+           header("Content-Type: application/zip");
+           header("Content-Type: application/doc");
+           header("Content-Type: application/docx");
+           header("Content-Transfer-Encoding: binary");
 
+           // Read the file
+           readfile($filePath);
+           exit;
+       }else{
+           echo 'The file does not exist.';
+       }
 
-
-
- //$file=$_GET['file'];
- $ctype="txt";
- //$size=$_GET['size'];
- /* echo $filename;
- echo $ctype;
- echo $size; */
- $tmp = explode(".",$filename);
- switch ($tmp[count($tmp)-1])
- {
-   case "pdf": $ctype="application/pdf"; break;
-   case "exe": $ctype="application/octet-stream"; break;
-   case "zip": $ctype="application/zip"; break;
-   case "docx":
-   case "doc": $ctype="application/msword"; break;
-   case "csv":
-   case "xls":
-   case "xlsx": $ctype="application/vnd.ms-excel"; break;
-   case "ppt": $ctype="application/vnd.ms-powerpoint"; break;
-   case "gif": $ctype="image/gif"; break;
-   case "png": $ctype="image/png"; break;
-   case "jpeg":
-   case "jpg": $ctype="image/jpg"; break;
-   case "tif":
-   case "tiff": $ctype="image/tiff"; break;
-   case "psd": $ctype="image/psd"; break;
-   case "bmp": $ctype="image/bmp"; break;
-   case "ico": $ctype="image/vnd.microsoft.icon"; break;
-   default: $ctype="application/force-download";
- }
-
- //$path=$filename;
+      }
 
 
- header("Pragma: public"); // required
- header("Expires: 0");
- header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
- header("Cache-Control: private",false); // required for certain browsers
- header("Content-Type: $ctype");
- header("Content-Disposition: attachment; filename=\"$filename\"");
- header("Content-Transfer-Encoding: binary");
- //header("Content-Length: ".$size);
- echo $file;
- //ob_clean();
- //flush();
- //readfile($path)
- }
- ?>
+     ?>

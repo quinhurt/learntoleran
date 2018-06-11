@@ -5,24 +5,23 @@ include "view/header.php";
 include "modle/db.php";
 include "modle/session.php";
 
- ?>
 
- <?php
- switch($_SESSION['roll']) {
-   case '1':
-         include 'view/adminnav.php';
+
+ switch($_SESSION["roll"]) {
+   case "1":
+         include "view/adminnav.php";
      break;
- case '2':
-         include 'view/studentnav.php';
+ case "2":
+         include "view/studentnav.php";
      break;
- case '3':
-         include 'view/teachernav.php';
+ case "3":
+         include "view/teachernav.php";
     break;
-  case '4':
-        include 'view/god.php';
+  case "4":
+        include "view/god.php";
     break;
 default:
-    include 'view/menu.php';
+    include "view\menu.php";
  break;
   }
 ?>
@@ -34,24 +33,11 @@ default:
 
 include "view/svg.svg"
  ?>
-hello world
+
 </div>
 
 
 
-<script>
-
-
-</script>
-
-
-<?php
-/*
-if(isset($_SESSION['userClassID'])) {
-      include 'view/html/classlist.php';
-  }   */
-
- ?>
 
 
 
